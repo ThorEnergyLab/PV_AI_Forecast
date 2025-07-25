@@ -1,0 +1,17 @@
+# Foldery z wynikami i modelami
+outputs/
+models/
+
+# Pliki cache Pythona
+__pycache__/
+*.pyc
+
+# Cache notebooków
+.ipynb_checkpoints/
+
+# Pliki systemowe Windows/Mac
+Thumbs.db
+.DS_Store
+
+# Pliki środowiskowe, jeśli używasz .env
+.env
