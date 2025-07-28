@@ -7,3 +7,5 @@ seaborn
 joblib
 requests
 paho-mqtt
+python-dotenv
+
