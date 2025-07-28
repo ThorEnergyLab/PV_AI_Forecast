@@ -115,3 +115,10 @@ The connection details (`BROKER`, `PORT`, `USERNAME`, `PASSWORD`, `TOPIC`) must 
 Ten skrypt Pythona łączy się z brokerem MQTT, subskrybuje wskazany wzorzec tematów (topic pattern) i zapisuje przychodzące wiadomości do pliku CSV z dokładnym czasem. Skrypt działa ciągle w tle, dopisując dane na bieżąco.
 
 Dane dostępowe do brokera (`BROKER`, `PORT`, `USERNAME`, `PASSWORD`, `TOPIC`) należy ustawić w pliku przed uruchomieniem. Skrypt jest prostym przykładem na pobieranie danych z falownika lub innych urządzeń MQTT do dalszej analizy i przetwarzania.
+
+## Example Historical Data Downloader
+
+The script `solcast_history_downloader.py` is an example tool for fetching historical solar radiation data from Solcast API.  
+It requires setting your Solcast API key as an environment variable `SOLCAST_API_KEY`.  
+Please note this script is currently untested outside Jupyter Notebook and should be used as a starting point.
+
