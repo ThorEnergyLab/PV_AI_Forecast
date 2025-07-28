@@ -103,3 +103,15 @@ This Jupyter notebook serves as an interactive environment for data exploration,
 
 **Note:**  
 This notebook is intended for development and experimentation. The production-ready code is organized in Python scripts (`main.py`, `predict.py`, etc.). You may use this notebook for further development or learning, but it is not required for running the production workflow.
+
+### MQTT Data Collector Script / Skrypt do pobierania danych z MQTT
+
+This Python script connects to an MQTT broker, subscribes to a specified topic pattern, and saves incoming messages to a CSV file with timestamps. It runs continuously in the background, appending new data as it arrives.
+
+The connection details (`BROKER`, `PORT`, `USERNAME`, `PASSWORD`, `TOPIC`) must be configured in the script before running. This script is intended as a simple example of how to collect data from your inverter or other MQTT-enabled devices for further processing and analysis.
+
+---
+
+Ten skrypt Pythona łączy się z brokerem MQTT, subskrybuje wskazany wzorzec tematów (topic pattern) i zapisuje przychodzące wiadomości do pliku CSV z dokładnym czasem. Skrypt działa ciągle w tle, dopisując dane na bieżąco.
+
+Dane dostępowe do brokera (`BROKER`, `PORT`, `USERNAME`, `PASSWORD`, `TOPIC`) należy ustawić w pliku przed uruchomieniem. Skrypt jest prostym przykładem na pobieranie danych z falownika lub innych urządzeń MQTT do dalszej analizy i przetwarzania.
