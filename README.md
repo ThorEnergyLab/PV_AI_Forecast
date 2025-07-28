@@ -89,3 +89,17 @@ SOLCAST_API_KEY=your_api_key_here 🔑
 .env is ignored by Git thanks to .gitignore, so your secrets stay safe 🔒
 
 Never share your API key publicly! 🚫🔑
+
+## Interactive Notebook (`pipeline.ipynb`)
+
+This Jupyter notebook serves as an interactive environment for data exploration, preprocessing, model training, and prediction testing. It contains step-by-step code snippets, visualizations, and explanations used during the development phase of the project.
+
+**Purpose:**
+
+- Explore and clean historical data from MQTT and Solcast sources.
+- Prototype and train the neural network model.
+- Visualize intermediate results and forecasts.
+- Experiment with different data processing and model configurations.
+
+**Note:**  
+This notebook is intended for development and experimentation. The production-ready code is organized in Python scripts (`main.py`, `predict.py`, etc.). You may use this notebook for further development or learning, but it is not required for running the production workflow.
