@@ -1,94 +1,120 @@
+import os
 import pandas as pd
 import numpy as np
 
-
 class DataMerger:
-    def __init__(self, plik_falownik, plik_solcast):
-        self.plik_falownik = plik_falownik
-        self.plik_solcast = plik_solcast
-        self.wynik_dopasowany = "outputs/dopasowane_finalnie.csv"
-        self.wynik_treningowy = "outputs/dane_treningowe.csv"
+    def __init__(self, inverter_file, solcast_file):
+        self.inverter_file = inverter_file
+        self.solcast_file = solcast_file
 
-    def dopasuj_i_przygotuj_dane(self):
-        # Wczytanie danych
-        dane_falownik = pd.read_csv(self.plik_falownik)
-        dane_solcast = pd.read_csv(self.plik_solcast)
+        # Base project directory, one level above this file's folder
+        # Bazowy katalog projektu, o poziom wyżej niż folder tego pliku
+        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+        self.outputs_dir = os.path.join(base_dir, "outputs")
 
-        # Konwersje czasu
-        dane_falownik['timestamp'] = pd.to_datetime(dane_falownik['timestamp'])
-        dane_falownik['timestamp'] = dane_falownik['timestamp'].dt.tz_localize('Europe/Warsaw').dt.tz_convert('UTC')
-        dane_solcast['period_end'] = pd.to_datetime(dane_solcast['period_end'], utc=True)
+        # Ensure output directory exists
+        # Upewnij się, że katalog wyjściowy istnieje
+        os.makedirs(self.outputs_dir, exist_ok=True)
 
-        # Zakresy danych
-        min_solcast = dane_solcast['period_end'].min()
-        max_solcast = dane_solcast['period_end'].max()
+        # Full paths to output files
+        # Pełne ścieżki do plików wyjściowych
+        self.final_matched_file = os.path.join(self.outputs_dir, "final_matched.csv")
+        self.training_data_file = os.path.join(self.outputs_dir, "training_data.csv")
 
-        print("\n=== SPRAWDZENIE ZAKRESÓW DAT ===")
-        print(f"Falownik: {dane_falownik['timestamp'].min()} → {dane_falownik['timestamp'].max()}")
+    def match_and_prepare_data(self):
+        # Load data from CSV files
+        # Wczytaj dane z plików CSV
+        inverter_data = pd.read_csv(self.inverter_file)
+        solcast_data = pd.read_csv(self.solcast_file)
+
+        # Convert timestamps to datetime and localize/convert timezones
+        # Konwersja czasów i zmiana stref czasowych
+        inverter_data['timestamp'] = pd.to_datetime(inverter_data['timestamp'])
+        inverter_data['timestamp'] = inverter_data['timestamp'].dt.tz_localize('Europe/Warsaw').dt.tz_convert('UTC')
+        solcast_data['period_end'] = pd.to_datetime(solcast_data['period_end'], utc=True)
+
+        # Data ranges
+        # Zakresy dat
+        min_solcast = solcast_data['period_end'].min()
+        max_solcast = solcast_data['period_end'].max()
+
+        print("\n=== CHECKING DATE RANGES ===")
+        print(f"Inverter: {inverter_data['timestamp'].min()} → {inverter_data['timestamp'].max()}")
         print(f"Solcast : {min_solcast} → {max_solcast}")
 
-        # Ograniczenie danych falownika do zakresu Solcast
-        dane_falownik = dane_falownik[
-            (dane_falownik['timestamp'] >= min_solcast) &
-            (dane_falownik['timestamp'] <= max_solcast)
+        # Limit inverter data to Solcast date range
+        # Ogranicz dane falownika do zakresu dat Solcast
+        inverter_data = inverter_data[
+            (inverter_data['timestamp'] >= min_solcast) &
+            (inverter_data['timestamp'] <= max_solcast)
         ]
 
-        print(f"✅ Po ograniczeniu dane falownika: {len(dane_falownik)} rekordów")
+        print(f" Inverter data after limiting: {len(inverter_data)} records")
 
-        # Sortowanie
-        dane_falownik = dane_falownik.sort_values('timestamp')
-        dane_solcast = dane_solcast.sort_values('period_end')
+        # Sort data by timestamp
+        # Sortuj dane po czasie
+        inverter_data = inverter_data.sort_values('timestamp')
+        solcast_data = solcast_data.sort_values('period_end')
 
-        # Merge
-        dane_polaczone = pd.merge_asof(
-            dane_falownik,
-            dane_solcast[['period_end', 'ghi', 'air_temp']],
+        # Merge using nearest match within 3 minutes tolerance
+        # Scal dane na podstawie najbliższego czasu z tolerancją 3 minut
+        merged_data = pd.merge_asof(
+            inverter_data,
+            solcast_data[['period_end', 'ghi', 'air_temp']],
             left_on='timestamp',
             right_on='period_end',
             direction='nearest',
             tolerance=pd.Timedelta('3min')
         )
 
-        brak_ghi = dane_polaczone['ghi'].isna().sum()
-        print(f"⚠️ Liczba niedopasowanych wierszy (ghi NaN): {brak_ghi}")
+        missing_ghi = merged_data['ghi'].isna().sum()
+        print(f" Number of unmatched rows (ghi NaN): {missing_ghi}")
 
-        # Ustawienie timestamp jako indeks
-        dane_polaczone = dane_polaczone.reset_index(drop=True).set_index('timestamp')
+        # Set timestamp as index
+        # Ustaw timestamp jako indeks
+        merged_data = merged_data.reset_index(drop=True).set_index('timestamp')
 
-        # Obliczanie energii w 15-minutowych przedziałach
-        energia_15min = (
-            dane_polaczone['energia [kW/h]']
+        # Calculate energy sums in 15-minute intervals
+        # Oblicz sumy energii w 15-minutowych przedziałach
+        energy_15min = (
+            merged_data['energy_kWh']
             .resample('15min')
             .sum()
             .round(4)
-            .to_frame(name='energia_15min [kWh]')
+            .to_frame(name='energy_15min_kWh')
         )
 
-        energia_15min['energia_15min [kWh]'] = energia_15min['energia_15min [kWh]'].clip(lower=0.0)
-        energia_15min.loc[energia_15min['energia_15min [kWh]'] > 2.0, 'energia_15min [kWh]'] = 0.0
+        # Clip energy values to non-negative and zero out if above 2.0 kWh (filter outliers)
+        # Ogranicz wartości energii do nieujemnych i wyzeruj, jeśli powyżej 2 kWh (usuń outliery)
+        energy_15min['energy_15min_kWh'] = energy_15min['energy_15min_kWh'].clip(lower=0.0)
+        energy_15min.loc[energy_15min['energy_15min_kWh'] > 2.0, 'energy_15min_kWh'] = 0.0
 
-        # Dołączenie energii do danych
-        dane_polaczone = dane_polaczone.join([energia_15min]).reset_index()
+        # Join energy data back to merged dataframe
+        # Dołącz dane o energii do połączonych danych
+        merged_data = merged_data.join([energy_15min]).reset_index()
 
-        # Cechy czasowe
-        dane_polaczone['hour_decimal'] = dane_polaczone['timestamp'].dt.hour + dane_polaczone['timestamp'].dt.minute / 60
-        dane_polaczone['day_of_year'] = dane_polaczone['timestamp'].dt.dayofyear
-        dane_polaczone['sin_hour'] = np.sin(2 * np.pi * dane_polaczone['hour_decimal'] / 24)
-        dane_polaczone['cos_hour'] = np.cos(2 * np.pi * dane_polaczone['hour_decimal'] / 24)
+        # Create time-based features
+        # Utwórz cechy czasowe
+        merged_data['hour_decimal'] = merged_data['timestamp'].dt.hour + merged_data['timestamp'].dt.minute / 60
+        merged_data['day_of_year'] = merged_data['timestamp'].dt.dayofyear
+        merged_data['sin_hour'] = np.sin(2 * np.pi * merged_data['hour_decimal'] / 24)
+        merged_data['cos_hour'] = np.cos(2 * np.pi * merged_data['hour_decimal'] / 24)
 
-        # Zapis pełnych danych
-        dane_polaczone.to_csv(self.wynik_dopasowany, index=False)
+        # Save full matched data
+        # Zapisz pełne dane po dopasowaniu
+        merged_data.to_csv(self.final_matched_file, index=False)
 
-        # Tworzenie zbioru treningowego — tylko gdzie jest GHI i energia
-        dane_treningowe = dane_polaczone[
-            (dane_polaczone['ghi'].notna()) &
-            (dane_polaczone['energia_15min [kWh]'].notna())
+        # Create training dataset - only rows with ghi and energy available
+        # Stwórz zbiór treningowy - tylko tam, gdzie dostępne są GHI i energia
+        training_data = merged_data[
+            (merged_data['ghi'].notna()) &
+            (merged_data['energy_15min_kWh'].notna())
         ][[
-            'timestamp', 'ghi', 'air_temp', 'sin_hour', 'cos_hour', 'day_of_year', 'energia_15min [kWh]'
+            'timestamp', 'ghi', 'air_temp', 'sin_hour', 'cos_hour', 'day_of_year', 'energy_15min_kWh'
         ]]
 
-        dane_treningowe.to_csv(self.wynik_treningowy, index=False)
+        training_data.to_csv(self.training_data_file, index=False)
 
-        print(f"✅ Dane treningowe zapisane: {len(dane_treningowe)} rekordów")
+        print(f" Training data saved: {len(training_data)} records")
 
-        return dane_treningowe
+        return training_data

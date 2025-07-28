@@ -6,45 +6,41 @@ This project predicts photovoltaic (PV) energy production based on weather forec
 
 ## 📦 Project Structure
 
-PV_AI_Forecast/
-├── data/ ← Input data (mqtt_data.csv, solcast_history.csv, solcast_forecast.csv)
-├── outputs/ ← Processed data and results (pivoted CSVs, reports)
-├── models/ ← Saved AI models (model_trained.keras, scaler_produkcji.pkl)
-├── src/ ← Python scripts (data_cleaner.py, data_merger.py, model_trainer.py, predictor.py, visualizer.py, main.py)
-├── pipeline.ipynb ← Jupyter notebook for interactive work
-├── README.md ← Project description (this file)
-├── requirements.txt ← Required Python libraries
-├── .gitignore ← Files and folders to be ignored by Git
-
-yaml
-Kopiuj
-Edytuj
+PV_AI_Forecast/  
+├── data/ ← Input data (mqtt_data.csv, solcast_history.csv, solcast_forecast.csv)  
+├── outputs/ ← Processed data and results (pivoted CSVs, reports)  
+├── models/ ← Saved AI models (model_trained.keras, scaler_produkcji.pkl)  
+├── src/ ← Python scripts (data_cleaner.py, data_merger.py, model_trainer.py, predictor.py, visualizer.py, main.py)  
+├── pipeline.ipynb ← Jupyter notebook for interactive work  
+├── README.md ← Project description (this file)  
+├── requirements.txt ← Required Python libraries  
+├── .gitignore ← Files and folders to be ignored by Git  
 
 ---
 
 ## 🚀 Features
 
-- ✅ Cleaning and filtering data from MQTT (inverter or LAN Controller).
-- ✅ Merging inverter data with Solcast data (historical for training or forecast for prediction).
-- ✅ AI model training (regression using a Multi-Layer Perceptron).
-- ✅ Energy production prediction based on weather forecast.
-- ✅ Aggregating results to 15-minute intervals and daily totals.
-- ✅ Visualization of predictions and historical data.
+- ✅ Cleaning and filtering data from MQTT (inverter or LAN Controller).  
+- ✅ Merging inverter data with Solcast data (historical for training or forecast for prediction).  
+- ✅ AI model training (regression using a Multi-Layer Perceptron).  
+- ✅ Energy production prediction based on weather forecast.  
+- ✅ Aggregating results to 15-minute intervals and daily totals.  
+- ✅ Visualization of predictions and historical data.  
 
 ---
 
 ## 🔧 Requirements
 
-- Python 3.9 or higher
-- TensorFlow
-- scikit-learn
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- joblib
-- (optional) requests — if using Solcast API
-- (optional) paho-mqtt — if using MQTT for data logging or device control
+- Python 3.9 or higher  
+- TensorFlow  
+- scikit-learn  
+- pandas  
+- numpy  
+- matplotlib  
+- seaborn  
+- joblib  
+- (optional) requests — if using Solcast API  
+- (optional) paho-mqtt — if using MQTT for data logging or device control  
 
 ---
 
@@ -54,45 +50,42 @@ Edytuj
 
 ```bash
 pip install -r requirements.txt
-✅ Step 2: Run the full pipeline (clean → merge → train → predict)
-bash
-Kopiuj
-Edytuj
+
+### ✅ Step 2: Run the full pipeline (clean → merge → train → predict)
+
+```bash
 cd src
 python main.py
-✅ Step 3: Run only prediction (without training)
-bash
-Kopiuj
-Edytuj
+### ✅ Step 3: Run only prediction (without training)
+
+```bash
 cd src
 python predict.py
-🔥 Future Development
- Automatic downloading of Solcast forecast data every 6 hours.
-
- Continuous MQTT data logging to a database.
-
- Real-time control of devices via MQTT based on predictions and live data.
-
- Web dashboard for monitoring predictions and historical data.
-
- Automatic retraining of the AI model with new data.
-
-👷 Project Status
-✅ The pipeline is working in testing mode.
-
-🔨 Migration from Jupyter notebook to production-grade Python scripts is in progress.
-
-🚀 The GitHub version is under active development and will be updated regularly.
-
-📜 License
-Work in progress — the license will be defined after the initial development phase.
 
 
+1.env Configuration
+## ⚙️ `.env` Configuration
 
+This project uses a `.env` file to store environment variables that control how the program runs.
 
+### 📋 How to prepare your `.env` file
 
+1. Copy the `.env.example` file to `.env` in the root folder:
 
+```bash
+cp .env.example .env
 
+Or create a new .env file and paste the contents from .env.example.
 
+2. Fill in your Solcast API key:
+SOLCAST_API_KEY=your_api_key_here 🔑
+3. Set the mode with USE_DEMO:
 
+1 — Demo mode (loads data from local CSV file) 🛠️
 
+0 — Production mode (fetches data online) ☁️
+
+⚠️ Important notes
+.env is ignored by Git thanks to .gitignore, so your secrets stay safe 🔒
+
+Never share your API key publicly! 🚫🔑

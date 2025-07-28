@@ -2,24 +2,24 @@ from data_merger import DataMerger
 from model_trainer import ModelTrainer
 import pandas as pd
 
-
 def main():
-    print("🚀 Start treningu...")
+    print(" Starting training...")  # Start treningu...
 
-    # 🧹 Łączenie danych historycznych
-    merger = DataMerger("outputs/dane_falownika_plus_roz_moc.csv", "data/solcast_history.csv")
-    dane_treningowe = merger.dopasuj_i_przygotuj_dane()
+    #  Merge historical data from inverter output and Solcast history
+    #  Łączenie danych historycznych z falownika i Solcast
+    merger = DataMerger("outputs/inverter_data_plus_power.csv", "data/solcast_history.csv")
+    training_data = merger.match_and_prepare_data()  # dopasuj_i_przygotuj_dane()
 
-    if dane_treningowe.empty:
-        print("⚠️ Brak danych treningowych. Sprawdź zakres dat!")
+    if training_data.empty:
+        print("⚠️ No training data available. Check date ranges!")  # Brak danych treningowych. Sprawdź zakres dat!
         return
 
-    # 🚀 Trenowanie modelu
-    trainer = ModelTrainer(dane_treningowe)
+    #  Train the model with prepared training data
+    #  Trenowanie modelu na przygotowanych danych
+    trainer = ModelTrainer(training_data)
     trainer.train()
 
-    print("✅ Trening zakończony pomyślnie.")
-
+    print(" Training completed successfully.")  # Trening zakończony pomyślnie.
 
 if __name__ == "__main__":
     main()

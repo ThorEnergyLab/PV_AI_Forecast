@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -16,12 +17,19 @@ class ModelTrainer:
         self.scaler = StandardScaler()
         self.model = None
 
+        # Ustal katalog models względem lokalizacji tego pliku
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # katalog wyżej niż src
+        self.models_dir = os.path.join(base_dir, "models")
+        os.makedirs(self.models_dir, exist_ok=True)  # tworzy jeśli nie istnieje
+
     def prepare_data(self):
+        # Przygotuj cechy (X) i etykiety (y) do treningu
         X = self.df[['ghi', 'air_temp', 'sin_hour', 'cos_hour']]
-        y = self.df['energia_15min [kWh]']
+        y = self.df['energy_15min_kWh']
         return X, y
 
     def build_model(self, input_dim):
+        # Buduj prostą sieć neuronową MLP
         model = Sequential([
             Dense(64, activation='relu', input_dim=input_dim),
             Dense(32, activation='relu'),
@@ -31,7 +39,7 @@ class ModelTrainer:
         return model
 
     def train(self):
-        print("🧠 Przygotowuję dane do treningu...")
+        print(" Przygotowuję dane do treningu...")
 
         X, y = self.prepare_data()
         X_train, X_test, y_train, y_test = train_test_split(
@@ -41,10 +49,10 @@ class ModelTrainer:
         X_train_scaled = self.scaler.fit_transform(X_train)
         X_test_scaled = self.scaler.transform(X_test)
 
-        print("🧠 Buduję model...")
+        print(" Buduję model...")
         self.model = self.build_model(input_dim=X_train_scaled.shape[1])
 
-        print("🚀 Start treningu...")
+        print(" Start treningu...")
         early_stop = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
 
         history = self.model.fit(
@@ -56,10 +64,14 @@ class ModelTrainer:
             verbose=1
         )
 
-        print("💾 Zapisuję model i scaler...")
-        self.model.save("models/model_trained.keras")
-        joblib.dump(self.scaler, "models/scaler_produkcji.pkl")
-        print("✅ Model zapisany.")
+        print(" Zapisuję model i scaler...")
+        model_path = os.path.join(self.models_dir, "model_trained.keras")
+        # Zmieniona nazwa scalera na angielską
+        scaler_path = os.path.join(self.models_dir, "production_scaler.pkl")
+
+        self.model.save(model_path)
+        joblib.dump(self.scaler, scaler_path)
+        print(f" Model zapisany do {model_path}")
 
         self.plot_training_history(history)
         self.evaluate_model(X_test_scaled, y_test)
@@ -77,7 +89,7 @@ class ModelTrainer:
         plt.show()
 
     def evaluate_model(self, X_test, y_test):
-        print("\n📊 Wyniki na danych testowych:")
+        print("\n Wyniki na danych testowych:")
 
         y_pred = self.model.predict(X_test).flatten()
 
@@ -85,6 +97,6 @@ class ModelTrainer:
         mae = mean_absolute_error(y_test, y_pred)
         rmse = np.sqrt(mean_squared_error(y_test, y_pred))
 
-        print(f"🔸 R² Score       : {r2:.4f}")
-        print(f"🔸 MAE (kWh)      : {mae:.4f}")
-        print(f"🔸 RMSE (kWh)     : {rmse:.4f}")
+        print(f" R² Score       : {r2:.4f}")
+        print(f" MAE (kWh)      : {mae:.4f}")
+        print(f" RMSE (kWh)     : {rmse:.4f}")

@@ -5,57 +5,84 @@ from datetime import datetime
 import sys
 import os
 
-import sys
-import os
+from dotenv import load_dotenv
+load_dotenv()  # załaduj zmienne środowiskowe / load environment variables
 
-# Dodaj folder 'data' do ścieżki importu
+# Set paths relative to location of predict.py
+# Ustaw ścieżki względem lokalizacji pliku predict.py
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
-data_dir = os.path.join(parent_dir, "data")
-sys.path.append(data_dir)
 
-#  Poprawiony import
+# 'data' and 'models' directories are in parent folder relative to src
+# Katalogi 'data' i 'models' znajdują się w katalogu nadrzędnym względem src
+data_dir = os.path.join(parent_dir, "data")
+models_dir = os.path.join(parent_dir, "models")
+
+sys.path.append(data_dir)  # dodaj katalog z danymi do ścieżki importu / add data directory to import path
+
+# Import forecast download function
+# Import funkcji pobierania prognozy
 from download_forecast import download_solcast_forecast
 
-
 def main():
-    print(" Start predykcji...")
+    print(" Start predykcji...")  # Start prediction...
 
-    #  Pobierz najnowszy forecast i zapisz do data/
-    download_solcast_forecast()
+    use_demo = os.getenv("USE_DEMO", "0")  # tryb DEMO lub ONLINE / demo or online mode
 
-    #  Przygotuj folder do zapisu
-    os.makedirs("predykcja", exist_ok=True)
+    if use_demo == "1":
+        print(" Tryb DEMO - wczytuję dane z lokalnego pliku demo...")  # Demo mode - loading local demo file
+        forecast_file = os.path.join(data_dir, "solcast_forecast_2025-07-25_demo.csv")
+        forecast = pd.read_csv(forecast_file)
+    else:
+        print(" Tryb ONLINE - pobieram i wczytuję najnowszy forecast...")  # Online mode - download and load latest forecast
+        download_solcast_forecast()
+        forecast_file = os.path.join(data_dir, "solcast_forecast.csv")
+        forecast = pd.read_csv(forecast_file)
 
-    #  Wczytaj model i skaler
-    predictor = Predictor("models/model_trained.keras", "models/scaler_produkcji.pkl")
+    # Prepare folder to save results in parent directory relative to src
+    # Przygotuj katalog do zapisu wyników w katalogu nadrzędnym względem src
+    predictions_dir = os.path.join(parent_dir, "predictions")
+    os.makedirs(predictions_dir, exist_ok=True)
 
-    #  Wczytaj forecast
-    forecast = pd.read_csv("data/solcast_forecast.csv")
+    # Load model and scaler paths
+    # Wczytaj ścieżki do modelu i skalera
+    model_path = os.path.join(models_dir, "model_trained.keras")
+    scaler_path = os.path.join(models_dir, "production_scaler.pkl")
+    predictor = Predictor(model_path, scaler_path)  # utwórz obiekt Predictor / create Predictor object
+
+    # Perform prediction
+    # Wykonaj predykcję
     prediction = predictor.predict(forecast)
 
-    #  Znacznik czasu do nazw plików
+    # Timestamp for output files
+    # Znacznik czasu dla plików wynikowych
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
 
-    #  Zapis CSV z predykcją
-    csv_pred = f"predykcja/prognoza_{timestamp}.csv"
+    # Suffix for filenames, depends on demo or live mode
+    # Sufiks plików wynikowych zależny od trybu DEMO lub LIVE
+    suffix = "_demo" if use_demo == "1" else ""
+
+    # Save prediction to CSV
+    # Zapisz predykcję do pliku CSV
+    csv_pred = os.path.join(predictions_dir, f"forecast{suffix}_{timestamp}.csv")
     prediction.to_csv(csv_pred, index=False)
-    print(f" Zapisano prognozę do {csv_pred}")
+    print(f" Saved forecast to {csv_pred}")
 
-    #  Agregacja dzienna
-    df_sum = predictor.agreguj_dziennie(prediction)
-    csv_sum = f"predykcja/suma_dzienna_{timestamp}.csv"
+    # Aggregate daily sums and save to CSV
+    # Agreguj sumy dzienne i zapisz do pliku CSV
+    df_sum = predictor.aggregate_daily(prediction)
+    csv_sum = os.path.join(predictions_dir, f"daily_sum{suffix}_{timestamp}.csv")
     df_sum.to_csv(csv_sum, index=False)
-    print(f" Zapisano sumę dzienną do {csv_sum}")
+    print(f" Saved daily sum to {csv_sum}")
 
-    #  Wykres
+    # Generate plot and save as PDF
+    # Wygeneruj wykres i zapisz jako PDF
     viz = Visualizer()
-    pdf_plot = f"predykcja/wykres_{timestamp}.pdf"
+    pdf_plot = os.path.join(predictions_dir, f"plot{suffix}_{timestamp}.pdf")
     viz.save_best_day(prediction, pdf_plot)
-    print(f" Wykres zapisany jako {pdf_plot}")
+    print(f" Plot saved as {pdf_plot}")
 
-    print(" Predykcja zakończona pomyślnie.")
-
+    print(" Prediction completed successfully.")  # Predykcja zakończona pomyślnie.
 
 if __name__ == "__main__":
     main()

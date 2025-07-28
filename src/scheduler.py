@@ -4,42 +4,43 @@ import subprocess
 import traceback
 import os
 
+#  Scheduled test times: (hour, minute)
+#  Zaplanowane czasy uruchomienia (godzina, minuta)
+SCHEDULED_TIMES = [(12, 0), (20, 0), (4, 0)]
 
-# 🔧 Czasy testowe: (godzina, minuta)
-SCHEDULED_TIMES = [(12,00), (20, 00), (4, 0)]
-
-
-# 🔧 Ustal ścieżkę do katalogu projektu (tam, gdzie jest ten plik)
+#  Set base directory of the project (where this file is located)
+#  Ustal katalog główny projektu (tam gdzie jest ten plik)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-LOG_FILE = os.path.join(BASE_DIR, "log.txt")
-
+LOG_FILE = os.path.join(BASE_DIR, "log.txt")  # ścieżka do pliku logów / log file path
 
 def log(text):
+    """Log message with timestamp to console and log file"""
+    # Loguj wiadomość z timestampem na konsolę i do pliku logów
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{timestamp}] {text}"
     print(line)
     with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(line + "\n")
 
-
 def run_predict():
+    """Run the predict.py script and log output"""
+    # Uruchom skrypt predict.py i zapisz logi
     try:
-        log("🚀 Startuję predict.py")
-        result = subprocess.run(["python", "src/predict.py"], capture_output=True, text=True)
+        log(" Starting predict.py")
+        result = subprocess.run(["python", "predict.py"], capture_output=True, text=True)
 
         if result.returncode == 0:
-            log("✅ Skrypt predict.py zakończony pomyślnie.")
+            log(" predict.py completed successfully.")
         else:
-            log(f"❌ Skrypt predict.py zwrócił błąd (kod: {result.returncode}).")
-            log(f"⚠️ stdout:\n{result.stdout}")
-            log(f"⚠️ stderr:\n{result.stderr}")
+            log(f" predict.py returned error (code: {result.returncode}).")
+            log(f" stdout:\n{result.stdout}")
+            log(f" stderr:\n{result.stderr}")
 
     except Exception as e:
-        log(f"💥 Wyjątek podczas uruchamiania predict.py: {e}")
+        log(f" Exception while running predict.py: {e}")
         log(traceback.format_exc())
 
-
-last_run = None
+last_run = None  # store last run time to avoid duplicate runs in the same minute
 
 while True:
     now = datetime.datetime.now()
@@ -48,18 +49,23 @@ while True:
         current_time_str = f"{now.date()}-{now.hour}-{now.minute}"
 
         if current_time_str != last_run:
-            log(f"⏰ Czas na uruchomienie predict.py o godzinie {now.hour:02d}:{now.minute:02d}")
+            log(f" Time to run predict.py at {now.hour:02d}:{now.minute:02d}")
             run_predict()
             last_run = current_time_str
 
-            # Poczekaj minutę, żeby nie odpalił dwa razy
+            # Wait 61 seconds to avoid running twice within the same minute
+            # Poczekaj minutę, aby nie uruchomić skryptu dwa razy w tym samym czasie
             time.sleep(61)
         else:
-            if now.second % 60 == 0:  # co minutę loguje, że żyje
-                log(f"⏳ Czekam... ({now.hour:02d}:{now.minute:02d})")
+            # Log heartbeat every minute that the scheduler is alive
+            # Co minutę loguj, że program działa i czeka
+            if now.second % 60 == 0:
+                log(f" Waiting... ({now.hour:02d}:{now.minute:02d})")
             time.sleep(10)
 
     else:
-        if now.second % 60 == 0:  # co minutę loguje, że żyje
-            log(f"⏳ Czekam... ({now.hour:02d}:{now.minute:02d})")
+        # Log heartbeat every minute when not in scheduled time
+        # Co minutę loguj, że program działa i czeka
+        if now.second % 60 == 0:
+            log(f" Waiting... ({now.hour:02d}:{now.minute:02d})")
         time.sleep(10)

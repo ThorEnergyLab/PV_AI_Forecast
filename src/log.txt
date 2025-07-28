@@ -987,3 +987,732 @@ UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in posit
 [2025-07-25 04:00:02] 🚀 Startuję predict.py
 [2025-07-25 04:00:16] ✅ Skrypt predict.py zakończony pomyślnie.
 [2025-07-25 04:00:16] ✅ Skrypt predict.py zakończony pomyślnie.
+[2025-07-25 12:00:08] ⏰ Czas na uruchomienie predict.py o godzinie 12:00
+[2025-07-25 12:00:09] 🚀 Startuję predict.py
+[2025-07-25 12:00:09] ⏰ Czas na uruchomienie predict.py o godzinie 12:00
+[2025-07-25 12:00:09] 🚀 Startuję predict.py
+[2025-07-25 12:00:24] ✅ Skrypt predict.py zakończony pomyślnie.
+[2025-07-25 12:00:25] ✅ Skrypt predict.py zakończony pomyślnie.
+[2025-07-25 20:00:05] ⏰ Czas na uruchomienie predict.py o godzinie 20:00
+[2025-07-25 20:00:05] 🚀 Startuję predict.py
+[2025-07-25 20:00:05] ❌ Skrypt predict.py zwrócił błąd (kod: 2).
+[2025-07-25 20:00:05] ⚠️ stdout:
+
+[2025-07-25 20:00:05] ⚠️ stderr:
+python: can't open file 'C:\\Projekty\\PV_AI_Forecast\\src\\src\\predict.py': [Errno 2] No such file or directory
+
+[2025-07-25 20:00:08] ⏰ Czas na uruchomienie predict.py o godzinie 20:00
+[2025-07-25 20:00:08] 🚀 Startuję predict.py
+[2025-07-25 20:00:58] ✅ Skrypt predict.py zakończony pomyślnie.
+[2025-07-25 20:21:00] ⏳ Czekam... (20:21)
+[2025-07-25 20:22:00] ⏳ Czekam... (20:22)
+[2025-07-25 20:23:00] ⏳ Czekam... (20:23)
+[2025-07-25 20:24:00] ⏳ Czekam... (20:24)
+[2025-07-25 20:25:00] ⏳ Czekam... (20:25)
+[2025-07-25 20:26:00] ⏳ Czekam... (20:26)
+[2025-07-25 20:27:00] ⏳ Czekam... (20:27)
+[2025-07-25 20:28:00] ⏳ Czekam... (20:28)
+[2025-07-25 20:29:00] ⏳ Czekam... (20:29)
+[2025-07-25 20:30:00] ⏳ Czekam... (20:30)
+[2025-07-25 20:31:00] ⏳ Czekam... (20:31)
+[2025-07-25 20:32:00] ⏳ Czekam... (20:32)
+[2025-07-25 20:33:00] ⏳ Czekam... (20:33)
+[2025-07-25 20:34:00] ⏳ Czekam... (20:34)
+[2025-07-25 20:35:00] ⏳ Czekam... (20:35)
+[2025-07-25 20:36:00] ⏳ Czekam... (20:36)
+[2025-07-25 20:37:00] ⏳ Czekam... (20:37)
+[2025-07-25 20:38:00] ⏳ Czekam... (20:38)
+[2025-07-25 20:39:00] ⏳ Czekam... (20:39)
+[2025-07-25 20:40:00] ⏳ Czekam... (20:40)
+[2025-07-25 20:41:00] ⏳ Czekam... (20:41)
+[2025-07-25 20:42:00] ⏳ Czekam... (20:42)
+[2025-07-25 20:43:00] ⏳ Czekam... (20:43)
+[2025-07-25 20:44:00] ⏳ Czekam... (20:44)
+[2025-07-25 20:45:00] ⏳ Czekam... (20:45)
+[2025-07-25 20:46:00] ⏳ Czekam... (20:46)
+[2025-07-25 20:47:00] ⏳ Czekam... (20:47)
+[2025-07-25 20:48:00] ⏳ Czekam... (20:48)
+[2025-07-25 20:49:00] ⏳ Czekam... (20:49)
+[2025-07-25 20:50:00] ⏳ Czekam... (20:50)
+[2025-07-25 20:51:00] ⏳ Czekam... (20:51)
+[2025-07-25 20:52:00] ⏳ Czekam... (20:52)
+[2025-07-25 20:53:00] ⏳ Czekam... (20:53)
+[2025-07-25 20:54:00] ⏳ Czekam... (20:54)
+[2025-07-25 20:55:00] ⏳ Czekam... (20:55)
+[2025-07-25 20:56:00] ⏳ Czekam... (20:56)
+[2025-07-25 20:57:00] ⏳ Czekam... (20:57)
+[2025-07-25 20:58:00] ⏳ Czekam... (20:58)
+[2025-07-25 20:59:00] ⏳ Czekam... (20:59)
+[2025-07-25 21:00:00] ⏳ Czekam... (21:00)
+[2025-07-25 21:01:00] ⏳ Czekam... (21:01)
+[2025-07-25 21:02:00] ⏳ Czekam... (21:02)
+[2025-07-25 21:03:00] ⏳ Czekam... (21:03)
+[2025-07-25 21:04:00] ⏳ Czekam... (21:04)
+[2025-07-25 21:05:00] ⏳ Czekam... (21:05)
+[2025-07-25 21:06:00] ⏳ Czekam... (21:06)
+[2025-07-25 21:07:00] ⏳ Czekam... (21:07)
+[2025-07-25 21:08:00] ⏳ Czekam... (21:08)
+[2025-07-25 21:09:00] ⏳ Czekam... (21:09)
+[2025-07-25 21:10:00] ⏳ Czekam... (21:10)
+[2025-07-25 21:11:00] ⏳ Czekam... (21:11)
+[2025-07-25 21:12:00] ⏳ Czekam... (21:12)
+[2025-07-25 21:13:00] ⏳ Czekam... (21:13)
+[2025-07-25 21:14:00] ⏳ Czekam... (21:14)
+[2025-07-25 21:15:00] ⏳ Czekam... (21:15)
+[2025-07-25 21:16:00] ⏳ Czekam... (21:16)
+[2025-07-25 21:17:00] ⏳ Czekam... (21:17)
+[2025-07-25 21:18:00] ⏳ Czekam... (21:18)
+[2025-07-25 21:19:00] ⏳ Czekam... (21:19)
+[2025-07-25 21:20:00] ⏳ Czekam... (21:20)
+[2025-07-25 21:21:00] ⏳ Czekam... (21:21)
+[2025-07-25 21:22:00] ⏳ Czekam... (21:22)
+[2025-07-25 21:23:00] ⏳ Czekam... (21:23)
+[2025-07-25 21:24:00] ⏳ Czekam... (21:24)
+[2025-07-25 21:25:00] ⏳ Czekam... (21:25)
+[2025-07-25 21:26:00] ⏳ Czekam... (21:26)
+[2025-07-25 21:27:00] ⏳ Czekam... (21:27)
+[2025-07-25 21:28:00] ⏳ Czekam... (21:28)
+[2025-07-25 21:29:00] ⏳ Czekam... (21:29)
+[2025-07-25 21:30:00] ⏳ Czekam... (21:30)
+[2025-07-25 21:31:00] ⏳ Czekam... (21:31)
+[2025-07-25 21:32:00] ⏳ Czekam... (21:32)
+[2025-07-25 21:33:00] ⏳ Czekam... (21:33)
+[2025-07-25 21:34:00] ⏳ Czekam... (21:34)
+[2025-07-25 21:35:00] ⏳ Czekam... (21:35)
+[2025-07-25 21:36:00] ⏳ Czekam... (21:36)
+[2025-07-25 21:37:00] ⏳ Czekam... (21:37)
+[2025-07-25 21:38:00] ⏳ Czekam... (21:38)
+[2025-07-25 21:39:00] ⏳ Czekam... (21:39)
+[2025-07-25 21:40:00] ⏳ Czekam... (21:40)
+[2025-07-25 21:41:00] ⏳ Czekam... (21:41)
+[2025-07-25 21:42:00] ⏳ Czekam... (21:42)
+[2025-07-25 21:43:00] ⏳ Czekam... (21:43)
+[2025-07-25 21:44:00] ⏳ Czekam... (21:44)
+[2025-07-25 21:45:00] ⏳ Czekam... (21:45)
+[2025-07-25 21:46:00] ⏳ Czekam... (21:46)
+[2025-07-25 21:47:00] ⏳ Czekam... (21:47)
+[2025-07-25 21:48:00] ⏳ Czekam... (21:48)
+[2025-07-25 21:49:00] ⏳ Czekam... (21:49)
+[2025-07-25 21:50:00] ⏳ Czekam... (21:50)
+[2025-07-25 21:51:00] ⏳ Czekam... (21:51)
+[2025-07-25 21:52:00] ⏳ Czekam... (21:52)
+[2025-07-25 21:53:00] ⏳ Czekam... (21:53)
+[2025-07-25 21:54:00] ⏳ Czekam... (21:54)
+[2025-07-25 21:55:00] ⏳ Czekam... (21:55)
+[2025-07-25 21:56:00] ⏳ Czekam... (21:56)
+[2025-07-25 21:57:00] ⏳ Czekam... (21:57)
+[2025-07-25 21:58:00] ⏳ Czekam... (21:58)
+[2025-07-25 21:59:00] ⏳ Czekam... (21:59)
+[2025-07-25 22:00:00] ⏳ Czekam... (22:00)
+[2025-07-25 22:01:00] ⏳ Czekam... (22:01)
+[2025-07-25 22:02:00] ⏳ Czekam... (22:02)
+[2025-07-25 22:03:00] ⏳ Czekam... (22:03)
+[2025-07-25 22:04:00] ⏳ Czekam... (22:04)
+[2025-07-25 22:05:00] ⏳ Czekam... (22:05)
+[2025-07-25 22:06:00] ⏳ Czekam... (22:06)
+[2025-07-25 22:07:00] ⏳ Czekam... (22:07)
+[2025-07-25 22:08:00] ⏳ Czekam... (22:08)
+[2025-07-25 22:09:00] ⏳ Czekam... (22:09)
+[2025-07-25 22:10:00] ⏳ Czekam... (22:10)
+[2025-07-25 22:11:00] ⏳ Czekam... (22:11)
+[2025-07-25 22:12:00] ⏳ Czekam... (22:12)
+[2025-07-25 22:13:00] ⏳ Czekam... (22:13)
+[2025-07-25 22:14:00] ⏳ Czekam... (22:14)
+[2025-07-25 22:15:00] ⏳ Czekam... (22:15)
+[2025-07-25 22:16:00] ⏳ Czekam... (22:16)
+[2025-07-25 22:17:00] ⏳ Czekam... (22:17)
+[2025-07-25 22:18:00] ⏳ Czekam... (22:18)
+[2025-07-25 22:19:00] ⏳ Czekam... (22:19)
+[2025-07-25 22:20:00] ⏳ Czekam... (22:20)
+[2025-07-25 22:21:00] ⏳ Czekam... (22:21)
+[2025-07-25 22:22:00] ⏳ Czekam... (22:22)
+[2025-07-25 22:23:00] ⏳ Czekam... (22:23)
+[2025-07-25 22:24:00] ⏳ Czekam... (22:24)
+[2025-07-25 22:25:00] ⏳ Czekam... (22:25)
+[2025-07-25 22:26:00] ⏳ Czekam... (22:26)
+[2025-07-25 22:27:00] ⏳ Czekam... (22:27)
+[2025-07-25 22:28:00] ⏳ Czekam... (22:28)
+[2025-07-25 22:29:00] ⏳ Czekam... (22:29)
+[2025-07-25 22:30:00] ⏳ Czekam... (22:30)
+[2025-07-25 22:31:00] ⏳ Czekam... (22:31)
+[2025-07-25 22:32:00] ⏳ Czekam... (22:32)
+[2025-07-25 22:33:00] ⏳ Czekam... (22:33)
+[2025-07-25 22:34:00] ⏳ Czekam... (22:34)
+[2025-07-25 22:35:00] ⏳ Czekam... (22:35)
+[2025-07-25 22:36:00] ⏳ Czekam... (22:36)
+[2025-07-25 22:37:00] ⏳ Czekam... (22:37)
+[2025-07-25 22:38:00] ⏳ Czekam... (22:38)
+[2025-07-25 22:39:00] ⏳ Czekam... (22:39)
+[2025-07-25 22:40:00] ⏳ Czekam... (22:40)
+[2025-07-25 22:41:00] ⏳ Czekam... (22:41)
+[2025-07-25 22:42:00] ⏳ Czekam... (22:42)
+[2025-07-25 22:43:00] ⏳ Czekam... (22:43)
+[2025-07-25 22:44:00] ⏳ Czekam... (22:44)
+[2025-07-25 22:45:00] ⏳ Czekam... (22:45)
+[2025-07-25 22:46:00] ⏳ Czekam... (22:46)
+[2025-07-25 22:47:00] ⏳ Czekam... (22:47)
+[2025-07-25 22:48:00] ⏳ Czekam... (22:48)
+[2025-07-25 22:49:00] ⏳ Czekam... (22:49)
+[2025-07-25 22:50:00] ⏳ Czekam... (22:50)
+[2025-07-25 22:51:00] ⏳ Czekam... (22:51)
+[2025-07-25 22:52:00] ⏳ Czekam... (22:52)
+[2025-07-25 22:53:00] ⏳ Czekam... (22:53)
+[2025-07-25 22:54:00] ⏳ Czekam... (22:54)
+[2025-07-25 22:55:00] ⏳ Czekam... (22:55)
+[2025-07-25 22:56:00] ⏳ Czekam... (22:56)
+[2025-07-25 22:57:00] ⏳ Czekam... (22:57)
+[2025-07-25 22:58:00] ⏳ Czekam... (22:58)
+[2025-07-25 22:59:00] ⏳ Czekam... (22:59)
+[2025-07-25 23:00:00] ⏳ Czekam... (23:00)
+[2025-07-25 23:01:00] ⏳ Czekam... (23:01)
+[2025-07-25 23:02:00] ⏳ Czekam... (23:02)
+[2025-07-25 23:03:00] ⏳ Czekam... (23:03)
+[2025-07-25 23:04:00] ⏳ Czekam... (23:04)
+[2025-07-25 23:05:00] ⏳ Czekam... (23:05)
+[2025-07-25 23:06:00] ⏳ Czekam... (23:06)
+[2025-07-25 23:07:00] ⏳ Czekam... (23:07)
+[2025-07-25 23:08:00] ⏳ Czekam... (23:08)
+[2025-07-25 23:09:00] ⏳ Czekam... (23:09)
+[2025-07-25 23:10:00] ⏳ Czekam... (23:10)
+[2025-07-25 23:11:00] ⏳ Czekam... (23:11)
+[2025-07-25 23:12:00] ⏳ Czekam... (23:12)
+[2025-07-25 23:13:00] ⏳ Czekam... (23:13)
+[2025-07-25 23:14:00] ⏳ Czekam... (23:14)
+[2025-07-25 23:15:00] ⏳ Czekam... (23:15)
+[2025-07-25 23:16:00] ⏳ Czekam... (23:16)
+[2025-07-25 23:17:00] ⏳ Czekam... (23:17)
+[2025-07-25 23:18:00] ⏳ Czekam... (23:18)
+[2025-07-25 23:19:00] ⏳ Czekam... (23:19)
+[2025-07-25 23:20:00] ⏳ Czekam... (23:20)
+[2025-07-25 23:21:00] ⏳ Czekam... (23:21)
+[2025-07-25 23:22:00] ⏳ Czekam... (23:22)
+[2025-07-26 04:00:01] ⏰ Czas na uruchomienie predict.py o godzinie 04:00
+[2025-07-26 04:00:01] 🚀 Startuję predict.py
+[2025-07-26 04:00:07] ⏰ Czas na uruchomienie predict.py o godzinie 04:00
+[2025-07-26 04:00:07] 🚀 Startuję predict.py
+[2025-07-26 04:00:08] ❌ Skrypt predict.py zwrócił błąd (kod: 2).
+[2025-07-26 04:00:08] ⚠️ stdout:
+
+[2025-07-26 04:00:08] ⚠️ stderr:
+python: can't open file 'C:\\Projekty\\PV_AI_Forecast\\src\\src\\predict.py': [Errno 2] No such file or directory
+
+[2025-07-26 04:00:16] ✅ Skrypt predict.py zakończony pomyślnie.
+[2025-07-26 09:24:00] ⏳ Czekam... (09:24)
+[2025-07-26 09:25:00] ⏳ Czekam... (09:25)
+[2025-07-26 09:26:00] ⏳ Czekam... (09:26)
+[2025-07-26 09:27:00] ⏳ Czekam... (09:27)
+[2025-07-26 09:28:00] ⏳ Czekam... (09:28)
+[2025-07-26 09:29:00] ⏳ Czekam... (09:29)
+[2025-07-26 09:30:00] ⏳ Czekam... (09:30)
+[2025-07-26 09:31:00] ⏳ Czekam... (09:31)
+[2025-07-26 09:32:00] ⏳ Czekam... (09:32)
+[2025-07-26 09:33:00] ⏳ Czekam... (09:33)
+[2025-07-26 09:34:00] ⏳ Czekam... (09:34)
+[2025-07-26 09:35:00] ⏳ Czekam... (09:35)
+[2025-07-26 09:36:00] ⏳ Czekam... (09:36)
+[2025-07-26 09:37:00] ⏳ Czekam... (09:37)
+[2025-07-26 09:38:00] ⏳ Czekam... (09:38)
+[2025-07-26 09:39:00] ⏳ Czekam... (09:39)
+[2025-07-26 09:40:00] ⏳ Czekam... (09:40)
+[2025-07-26 09:41:00] ⏳ Czekam... (09:41)
+[2025-07-26 09:42:00] ⏳ Czekam... (09:42)
+[2025-07-26 09:43:00] ⏳ Czekam... (09:43)
+[2025-07-26 09:44:00] ⏳ Czekam... (09:44)
+[2025-07-26 09:45:00] ⏳ Czekam... (09:45)
+[2025-07-26 09:46:00] ⏳ Czekam... (09:46)
+[2025-07-26 09:47:00] ⏳ Czekam... (09:47)
+[2025-07-26 09:48:00] ⏳ Czekam... (09:48)
+[2025-07-26 09:49:00] ⏳ Czekam... (09:49)
+[2025-07-26 09:50:00] ⏳ Czekam... (09:50)
+[2025-07-26 09:51:00] ⏳ Czekam... (09:51)
+[2025-07-26 09:52:00] ⏳ Czekam... (09:52)
+[2025-07-26 09:53:00] ⏳ Czekam... (09:53)
+[2025-07-26 09:54:00] ⏳ Czekam... (09:54)
+[2025-07-26 09:55:00] ⏳ Czekam... (09:55)
+[2025-07-26 09:56:00] ⏳ Czekam... (09:56)
+[2025-07-26 09:57:00] ⏳ Czekam... (09:57)
+[2025-07-26 09:58:00] ⏳ Czekam... (09:58)
+[2025-07-26 09:59:00] ⏳ Czekam... (09:59)
+[2025-07-26 12:00:09] ⏰ Czas na uruchomienie predict.py o godzinie 12:00
+[2025-07-26 12:00:09] 🚀 Startuję predict.py
+[2025-07-26 12:00:16] ❌ Skrypt predict.py zwrócił błąd (kod: 1).
+[2025-07-26 12:00:16] ⚠️ stdout:
+ Start predykcji...
+
+[2025-07-26 12:00:16] ⚠️ stderr:
+2025-07-26 12:00:10.241855: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-26 12:00:11.375243: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 76, in <module>
+    main()
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 29, in main
+    print("\U0001f324\ufe0f Tryb DEMO - wczytuję dane z lokalnego pliku demo...")
+  File "C:\Users\progl\anaconda3\Lib\encodings\cp1250.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+[2025-07-26 15:44:00] ⏳ Czekam... (15:44)
+[2025-07-26 15:45:00] ⏳ Czekam... (15:45)
+[2025-07-26 15:46:00] ⏳ Czekam... (15:46)
+[2025-07-26 15:47:00] ⏳ Czekam... (15:47)
+[2025-07-26 15:48:00] ⏳ Czekam... (15:48)
+[2025-07-26 15:49:00] ⏳ Czekam... (15:49)
+[2025-07-26 15:50:00] ⏳ Czekam... (15:50)
+[2025-07-26 15:51:00] ⏳ Czekam... (15:51)
+[2025-07-26 15:52:00] ⏳ Czekam... (15:52)
+[2025-07-26 15:53:00] ⏳ Czekam... (15:53)
+[2025-07-26 15:54:00] ⏳ Czekam... (15:54)
+[2025-07-26 15:55:00] ⏳ Czekam... (15:55)
+[2025-07-26 15:56:00] ⏳ Czekam... (15:56)
+[2025-07-26 15:57:00] ⏳ Czekam... (15:57)
+[2025-07-26 15:58:00] ⏳ Czekam... (15:58)
+[2025-07-26 15:59:00] ⏳ Czekam... (15:59)
+[2025-07-26 16:00:00] ⏳ Czekam... (16:00)
+[2025-07-26 16:01:00] ⏳ Czekam... (16:01)
+[2025-07-26 16:02:00] ⏳ Czekam... (16:02)
+[2025-07-26 16:03:00] ⏳ Czekam... (16:03)
+[2025-07-26 16:04:00] ⏳ Czekam... (16:04)
+[2025-07-26 16:05:00] ⏳ Czekam... (16:05)
+[2025-07-26 16:06:00] ⏳ Czekam... (16:06)
+[2025-07-26 16:07:00] ⏳ Czekam... (16:07)
+[2025-07-26 16:08:00] ⏳ Czekam... (16:08)
+[2025-07-26 16:09:00] ⏳ Czekam... (16:09)
+[2025-07-26 16:10:00] ⏳ Czekam... (16:10)
+[2025-07-26 16:11:00] ⏳ Czekam... (16:11)
+[2025-07-26 16:12:00] ⏳ Czekam... (16:12)
+[2025-07-26 16:13:00] ⏳ Czekam... (16:13)
+[2025-07-26 16:14:00] ⏳ Czekam... (16:14)
+[2025-07-26 16:15:00] ⏳ Czekam... (16:15)
+[2025-07-26 16:16:00] ⏳ Czekam... (16:16)
+[2025-07-26 16:17:00] ⏳ Czekam... (16:17)
+[2025-07-26 16:18:00] ⏳ Czekam... (16:18)
+[2025-07-26 16:19:00] ⏳ Czekam... (16:19)
+[2025-07-26 16:20:00] ⏳ Czekam... (16:20)
+[2025-07-26 16:21:00] ⏳ Czekam... (16:21)
+[2025-07-26 16:22:00] ⏳ Czekam... (16:22)
+[2025-07-26 16:23:00] ⏳ Czekam... (16:23)
+[2025-07-26 16:24:00] ⏳ Czekam... (16:24)
+[2025-07-26 16:25:00] ⏳ Czekam... (16:25)
+[2025-07-26 16:26:00] ⏳ Czekam... (16:26)
+[2025-07-26 16:27:00] ⏳ Czekam... (16:27)
+[2025-07-26 16:28:00] ⏳ Czekam... (16:28)
+[2025-07-26 16:29:00] ⏳ Czekam... (16:29)
+[2025-07-26 16:30:00] ⏳ Czekam... (16:30)
+[2025-07-26 16:31:00] ⏳ Czekam... (16:31)
+[2025-07-26 16:32:00] ⏳ Czekam... (16:32)
+[2025-07-26 16:33:00] ⏳ Czekam... (16:33)
+[2025-07-26 16:34:00] ⏳ Czekam... (16:34)
+[2025-07-26 16:35:00] ⏳ Czekam... (16:35)
+[2025-07-26 16:36:00] ⏳ Czekam... (16:36)
+[2025-07-26 16:37:00] ⏳ Czekam... (16:37)
+[2025-07-26 16:38:00] ⏳ Czekam... (16:38)
+[2025-07-26 16:39:00] ⏳ Czekam... (16:39)
+[2025-07-26 16:40:00] ⏳ Czekam... (16:40)
+[2025-07-26 16:41:00] ⏳ Czekam... (16:41)
+[2025-07-26 16:42:00] ⏳ Czekam... (16:42)
+[2025-07-26 16:43:00] ⏳ Czekam... (16:43)
+[2025-07-26 16:44:00] ⏳ Czekam... (16:44)
+[2025-07-26 16:45:00] ⏳ Czekam... (16:45)
+[2025-07-26 16:46:00] ⏳ Czekam... (16:46)
+[2025-07-26 16:47:00] ⏳ Czekam... (16:47)
+[2025-07-26 16:48:00] ⏳ Czekam... (16:48)
+[2025-07-26 16:49:00] ⏳ Czekam... (16:49)
+[2025-07-26 16:50:00] ⏳ Czekam... (16:50)
+[2025-07-26 16:51:00] ⏳ Czekam... (16:51)
+[2025-07-26 16:52:00] ⏳ Czekam... (16:52)
+[2025-07-26 16:53:00] ⏳ Czekam... (16:53)
+[2025-07-26 16:54:00] ⏳ Czekam... (16:54)
+[2025-07-26 16:55:00] ⏳ Czekam... (16:55)
+[2025-07-26 16:56:00] ⏳ Czekam... (16:56)
+[2025-07-26 16:57:00] ⏳ Czekam... (16:57)
+[2025-07-26 16:58:00] ⏳ Czekam... (16:58)
+[2025-07-26 16:59:00] ⏳ Czekam... (16:59)
+[2025-07-26 17:00:00] ⏳ Czekam... (17:00)
+[2025-07-26 17:01:00] ⏳ Czekam... (17:01)
+[2025-07-26 17:02:00] ⏳ Czekam... (17:02)
+[2025-07-26 17:03:00] ⏳ Czekam... (17:03)
+[2025-07-26 17:04:00] ⏳ Czekam... (17:04)
+[2025-07-26 17:05:00] ⏳ Czekam... (17:05)
+[2025-07-26 17:06:00] ⏳ Czekam... (17:06)
+[2025-07-26 17:07:00] ⏳ Czekam... (17:07)
+[2025-07-26 17:08:00] ⏳ Czekam... (17:08)
+[2025-07-26 17:09:00] ⏳ Czekam... (17:09)
+[2025-07-26 17:10:00] ⏳ Czekam... (17:10)
+[2025-07-26 17:11:00] ⏳ Czekam... (17:11)
+[2025-07-26 17:12:00] ⏳ Czekam... (17:12)
+[2025-07-26 17:13:00] ⏳ Czekam... (17:13)
+[2025-07-26 17:14:00] ⏳ Czekam... (17:14)
+[2025-07-26 17:15:00] ⏳ Czekam... (17:15)
+[2025-07-26 17:16:00] ⏳ Czekam... (17:16)
+[2025-07-26 17:17:00] ⏳ Czekam... (17:17)
+[2025-07-26 17:18:00] ⏳ Czekam... (17:18)
+[2025-07-26 17:19:00] ⏳ Czekam... (17:19)
+[2025-07-26 17:20:00] ⏳ Czekam... (17:20)
+[2025-07-26 17:21:00] ⏳ Czekam... (17:21)
+[2025-07-26 17:22:00] ⏳ Czekam... (17:22)
+[2025-07-26 17:23:00] ⏳ Czekam... (17:23)
+[2025-07-26 17:24:00] ⏳ Czekam... (17:24)
+[2025-07-26 17:25:00] ⏳ Czekam... (17:25)
+[2025-07-26 17:26:00] ⏳ Czekam... (17:26)
+[2025-07-26 17:27:00] ⏳ Czekam... (17:27)
+[2025-07-26 17:28:00] ⏳ Czekam... (17:28)
+[2025-07-26 17:29:00] ⏳ Czekam... (17:29)
+[2025-07-26 17:30:00] ⏳ Czekam... (17:30)
+[2025-07-26 17:31:00] ⏳ Czekam... (17:31)
+[2025-07-26 17:32:00] ⏳ Czekam... (17:32)
+[2025-07-26 17:33:00] ⏳ Czekam... (17:33)
+[2025-07-26 17:34:00] ⏳ Czekam... (17:34)
+[2025-07-26 17:35:00] ⏳ Czekam... (17:35)
+[2025-07-26 17:36:00] ⏳ Czekam... (17:36)
+[2025-07-26 17:37:00] ⏳ Czekam... (17:37)
+[2025-07-26 17:38:00] ⏳ Czekam... (17:38)
+[2025-07-26 17:39:00] ⏳ Czekam... (17:39)
+[2025-07-26 17:40:00] ⏳ Czekam... (17:40)
+[2025-07-26 17:41:00] ⏳ Czekam... (17:41)
+[2025-07-26 17:42:00] ⏳ Czekam... (17:42)
+[2025-07-26 17:43:00] ⏳ Czekam... (17:43)
+[2025-07-26 17:44:00] ⏳ Czekam... (17:44)
+[2025-07-26 17:45:00] ⏳ Czekam... (17:45)
+[2025-07-26 17:46:00] ⏳ Czekam... (17:46)
+[2025-07-26 17:47:00] ⏳ Czekam... (17:47)
+[2025-07-26 17:48:00] ⏳ Czekam... (17:48)
+[2025-07-26 17:49:00] ⏳ Czekam... (17:49)
+[2025-07-26 17:50:00] ⏳ Czekam... (17:50)
+[2025-07-26 17:51:00] ⏳ Czekam... (17:51)
+[2025-07-26 17:52:00] ⏳ Czekam... (17:52)
+[2025-07-26 17:53:00] ⏳ Czekam... (17:53)
+[2025-07-26 17:54:00] ⏳ Czekam... (17:54)
+[2025-07-26 17:55:00] ⏳ Czekam... (17:55)
+[2025-07-26 17:56:00] ⏳ Czekam... (17:56)
+[2025-07-26 17:57:00] ⏳ Czekam... (17:57)
+[2025-07-26 17:58:00] ⏳ Czekam... (17:58)
+[2025-07-26 17:59:00] ⏳ Czekam... (17:59)
+[2025-07-26 18:00:00] ⏳ Czekam... (18:00)
+[2025-07-26 18:01:00] ⏳ Czekam... (18:01)
+[2025-07-26 18:02:00] ⏳ Czekam... (18:02)
+[2025-07-26 18:03:00] ⏳ Czekam... (18:03)
+[2025-07-26 18:04:00] ⏳ Czekam... (18:04)
+[2025-07-26 18:05:00] ⏳ Czekam... (18:05)
+[2025-07-26 18:06:00] ⏳ Czekam... (18:06)
+[2025-07-26 18:07:00] ⏳ Czekam... (18:07)
+[2025-07-26 18:08:00] ⏳ Czekam... (18:08)
+[2025-07-26 18:09:00] ⏳ Czekam... (18:09)
+[2025-07-26 18:10:00] ⏳ Czekam... (18:10)
+[2025-07-26 18:11:00] ⏳ Czekam... (18:11)
+[2025-07-26 18:12:00] ⏳ Czekam... (18:12)
+[2025-07-26 18:13:00] ⏳ Czekam... (18:13)
+[2025-07-26 18:14:00] ⏳ Czekam... (18:14)
+[2025-07-26 18:15:00] ⏳ Czekam... (18:15)
+[2025-07-26 18:16:00] ⏳ Czekam... (18:16)
+[2025-07-26 18:17:00] ⏳ Czekam... (18:17)
+[2025-07-26 18:18:00] ⏳ Czekam... (18:18)
+[2025-07-26 18:19:00] ⏳ Czekam... (18:19)
+[2025-07-26 18:20:00] ⏳ Czekam... (18:20)
+[2025-07-26 18:21:00] ⏳ Czekam... (18:21)
+[2025-07-26 18:22:00] ⏳ Czekam... (18:22)
+[2025-07-26 18:23:00] ⏳ Czekam... (18:23)
+[2025-07-26 18:24:00] ⏳ Czekam... (18:24)
+[2025-07-26 18:25:00] ⏳ Czekam... (18:25)
+[2025-07-26 18:26:00] ⏳ Czekam... (18:26)
+[2025-07-26 18:27:00] ⏳ Czekam... (18:27)
+[2025-07-26 18:28:00] ⏳ Czekam... (18:28)
+[2025-07-26 18:29:00] ⏳ Czekam... (18:29)
+[2025-07-26 18:30:00] ⏳ Czekam... (18:30)
+[2025-07-26 18:31:00] ⏳ Czekam... (18:31)
+[2025-07-26 18:32:00] ⏳ Czekam... (18:32)
+[2025-07-26 18:33:00] ⏳ Czekam... (18:33)
+[2025-07-26 18:34:00] ⏳ Czekam... (18:34)
+[2025-07-26 18:35:00] ⏳ Czekam... (18:35)
+[2025-07-26 18:36:00] ⏳ Czekam... (18:36)
+[2025-07-26 18:37:00] ⏳ Czekam... (18:37)
+[2025-07-26 18:38:00] ⏳ Czekam... (18:38)
+[2025-07-26 18:39:00] ⏳ Czekam... (18:39)
+[2025-07-26 18:40:00] ⏳ Czekam... (18:40)
+[2025-07-26 18:41:00] ⏳ Czekam... (18:41)
+[2025-07-26 18:42:00] ⏳ Czekam... (18:42)
+[2025-07-26 18:43:00] ⏳ Czekam... (18:43)
+[2025-07-26 18:44:00] ⏳ Czekam... (18:44)
+[2025-07-26 18:45:00] ⏳ Czekam... (18:45)
+[2025-07-26 18:46:00] ⏳ Czekam... (18:46)
+[2025-07-26 18:47:00] ⏳ Czekam... (18:47)
+[2025-07-26 18:48:00] ⏳ Czekam... (18:48)
+[2025-07-26 18:49:00] ⏳ Czekam... (18:49)
+[2025-07-26 18:50:00] ⏳ Czekam... (18:50)
+[2025-07-26 18:51:00] ⏳ Czekam... (18:51)
+[2025-07-26 18:52:00] ⏳ Czekam... (18:52)
+[2025-07-26 18:53:00] ⏳ Czekam... (18:53)
+[2025-07-26 18:54:00] ⏳ Czekam... (18:54)
+[2025-07-26 18:55:00] ⏳ Czekam... (18:55)
+[2025-07-26 18:56:00] ⏳ Czekam... (18:56)
+[2025-07-26 18:57:00] ⏳ Czekam... (18:57)
+[2025-07-26 18:58:00] ⏳ Czekam... (18:58)
+[2025-07-26 18:59:00] ⏳ Czekam... (18:59)
+[2025-07-26 19:00:00] ⏳ Czekam... (19:00)
+[2025-07-26 19:01:00] ⏳ Czekam... (19:01)
+[2025-07-26 19:02:00] ⏳ Czekam... (19:02)
+[2025-07-26 19:03:00] ⏳ Czekam... (19:03)
+[2025-07-26 19:04:00] ⏳ Czekam... (19:04)
+[2025-07-26 19:05:00] ⏳ Czekam... (19:05)
+[2025-07-26 19:06:00] ⏳ Czekam... (19:06)
+[2025-07-26 19:07:00] ⏳ Czekam... (19:07)
+[2025-07-26 19:08:00] ⏳ Czekam... (19:08)
+[2025-07-26 19:09:00] ⏳ Czekam... (19:09)
+[2025-07-26 19:10:00] ⏳ Czekam... (19:10)
+[2025-07-26 19:11:00] ⏳ Czekam... (19:11)
+[2025-07-26 19:12:00] ⏳ Czekam... (19:12)
+[2025-07-26 19:13:00] ⏳ Czekam... (19:13)
+[2025-07-26 19:14:00] ⏳ Czekam... (19:14)
+[2025-07-26 19:15:00] ⏳ Czekam... (19:15)
+[2025-07-26 19:16:00] ⏳ Czekam... (19:16)
+[2025-07-26 19:17:00] ⏳ Czekam... (19:17)
+[2025-07-26 19:18:00] ⏳ Czekam... (19:18)
+[2025-07-26 19:19:00] ⏳ Czekam... (19:19)
+[2025-07-26 19:20:00] ⏳ Czekam... (19:20)
+[2025-07-26 19:21:00] ⏳ Czekam... (19:21)
+[2025-07-26 19:22:00] ⏳ Czekam... (19:22)
+[2025-07-26 19:23:00] ⏳ Czekam... (19:23)
+[2025-07-26 19:24:00] ⏳ Czekam... (19:24)
+[2025-07-26 19:25:00] ⏳ Czekam... (19:25)
+[2025-07-26 19:26:00] ⏳ Czekam... (19:26)
+[2025-07-26 19:27:00] ⏳ Czekam... (19:27)
+[2025-07-26 19:28:00] ⏳ Czekam... (19:28)
+[2025-07-26 19:29:00] ⏳ Czekam... (19:29)
+[2025-07-26 19:30:00] ⏳ Czekam... (19:30)
+[2025-07-26 19:31:00] ⏳ Czekam... (19:31)
+[2025-07-26 19:32:00] ⏳ Czekam... (19:32)
+[2025-07-26 19:33:00] ⏳ Czekam... (19:33)
+[2025-07-26 19:34:00] ⏳ Czekam... (19:34)
+[2025-07-26 19:35:00] ⏳ Czekam... (19:35)
+[2025-07-26 19:36:00] ⏳ Czekam... (19:36)
+[2025-07-26 19:37:00] ⏳ Czekam... (19:37)
+[2025-07-26 19:38:00] ⏳ Czekam... (19:38)
+[2025-07-26 19:39:00] ⏳ Czekam... (19:39)
+[2025-07-26 19:40:00] ⏳ Czekam... (19:40)
+[2025-07-26 19:41:00] ⏳ Czekam... (19:41)
+[2025-07-26 19:42:00] ⏳ Czekam... (19:42)
+[2025-07-26 19:43:00] ⏳ Czekam... (19:43)
+[2025-07-26 19:44:00] ⏳ Czekam... (19:44)
+[2025-07-26 19:45:00] ⏳ Czekam... (19:45)
+[2025-07-26 20:00:01] ⏰ Czas na uruchomienie predict.py o godzinie 20:00
+[2025-07-26 20:00:01] 🚀 Startuję predict.py
+[2025-07-26 20:00:07] ⏰ Time to run predict.py at 20:00
+[2025-07-26 20:00:07] 🚀 Starting predict.py
+[2025-07-26 20:00:07] ❌ predict.py returned error (code: 2).
+[2025-07-26 20:00:07] ⚠️ stdout:
+
+[2025-07-26 20:00:07] ⚠️ stderr:
+python: can't open file 'C:\\Projekty\\PV_AI_Forecast\\src\\src\\predict.py': [Errno 2] No such file or directory
+
+[2025-07-26 20:00:11] ❌ Skrypt predict.py zwrócił błąd (kod: 1).
+[2025-07-26 20:00:11] ⚠️ stdout:
+ Start predykcji...
+
+[2025-07-26 20:00:11] ⚠️ stderr:
+2025-07-26 20:00:02.626984: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-26 20:00:04.900065: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 88, in <module>
+    main()
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 37, in main
+    print("\u2601\ufe0f Tryb ONLINE - pobieram i wczytuję najnowszy forecast...")  # Online mode - download and load latest forecast
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\progl\anaconda3\Lib\encodings\cp1250.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+[2025-07-27 04:00:03] ⏰ Czas na uruchomienie predict.py o godzinie 04:00
+[2025-07-27 04:00:03] 🚀 Startuję predict.py
+[2025-07-27 04:00:09] ⏰ Time to run predict.py at 04:00
+[2025-07-27 04:00:09] 🚀 Starting predict.py
+[2025-07-27 04:00:09] ❌ predict.py returned error (code: 2).
+[2025-07-27 04:00:09] ⚠️ stdout:
+
+[2025-07-27 04:00:09] ⚠️ stderr:
+python: can't open file 'C:\\Projekty\\PV_AI_Forecast\\src\\src\\predict.py': [Errno 2] No such file or directory
+
+[2025-07-27 04:00:15] ❌ Skrypt predict.py zwrócił błąd (kod: 1).
+[2025-07-27 04:00:15] ⚠️ stdout:
+ Start predykcji...
+
+[2025-07-27 04:00:15] ⚠️ stderr:
+2025-07-27 04:00:05.323563: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 04:00:07.467666: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 88, in <module>
+    main()
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 37, in main
+    print("\u2601\ufe0f Tryb ONLINE - pobieram i wczytuję najnowszy forecast...")  # Online mode - download and load latest forecast
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\progl\anaconda3\Lib\encodings\cp1250.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+[2025-07-27 04:02:00] ⏳ Waiting... (04:02)
+[2025-07-27 04:03:00] ⏳ Waiting... (04:03)
+[2025-07-27 04:04:00] ⏳ Waiting... (04:04)
+[2025-07-27 04:05:00] ⏳ Waiting... (04:05)
+[2025-07-27 04:06:00] ⏳ Waiting... (04:06)
+[2025-07-27 04:07:00] ⏳ Waiting... (04:07)
+[2025-07-27 04:08:00] ⏳ Waiting... (04:08)
+[2025-07-27 04:09:00] ⏳ Waiting... (04:09)
+[2025-07-27 04:10:00] ⏳ Waiting... (04:10)
+[2025-07-27 04:11:00] ⏳ Waiting... (04:11)
+[2025-07-27 04:12:00] ⏳ Waiting... (04:12)
+[2025-07-27 04:13:00] ⏳ Waiting... (04:13)
+[2025-07-27 04:14:00] ⏳ Waiting... (04:14)
+[2025-07-27 04:15:00] ⏳ Waiting... (04:15)
+[2025-07-27 04:16:00] ⏳ Waiting... (04:16)
+[2025-07-27 12:00:07] ⏰ Time to run predict.py at 12:00
+[2025-07-27 12:00:07] 🚀 Starting predict.py
+[2025-07-27 12:00:08] ⏰ Czas na uruchomienie predict.py o godzinie 12:00
+[2025-07-27 12:00:08] 🚀 Startuję predict.py
+[2025-07-27 12:00:21] ❌ predict.py returned error (code: 1).
+[2025-07-27 12:00:21] ⚠️ stdout:
+ Start predykcji...
+
+[2025-07-27 12:00:21] ❌ Skrypt predict.py zwrócił błąd (kod: 1).
+[2025-07-27 12:00:21] ⚠️ stdout:
+ Start predykcji...
+
+[2025-07-27 12:00:21] ⚠️ stderr:
+2025-07-27 12:00:09.929550: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 12:00:12.745302: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 88, in <module>
+    main()
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 37, in main
+    print("\u2601\ufe0f Tryb ONLINE - pobieram i wczytuję najnowszy forecast...")  # Online mode - download and load latest forecast
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\progl\anaconda3\Lib\encodings\cp1250.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+[2025-07-27 12:00:21] ⚠️ stderr:
+2025-07-27 12:00:09.929550: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 12:00:12.745295: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 88, in <module>
+    main()
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 37, in main
+    print("\u2601\ufe0f Tryb ONLINE - pobieram i wczytuję najnowszy forecast...")  # Online mode - download and load latest forecast
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\progl\anaconda3\Lib\encodings\cp1250.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+[2025-07-27 20:00:05] ⏰ Time to run predict.py at 20:00
+[2025-07-27 20:00:05] 🚀 Starting predict.py
+[2025-07-27 20:00:05] ⏰ Czas na uruchomienie predict.py o godzinie 20:00
+[2025-07-27 20:00:05] 🚀 Startuję predict.py
+[2025-07-27 20:00:19] ❌ predict.py returned error (code: 1).
+[2025-07-27 20:00:19] ⚠️ stdout:
+ Start predykcji...
+
+[2025-07-27 20:00:19] ❌ Skrypt predict.py zwrócił błąd (kod: 1).
+[2025-07-27 20:00:19] ⚠️ stdout:
+ Start predykcji...
+
+[2025-07-27 20:00:19] ⚠️ stderr:
+2025-07-27 20:00:07.633013: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 20:00:09.887792: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 88, in <module>
+    main()
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 37, in main
+    print("\u2601\ufe0f Tryb ONLINE - pobieram i wczytuję najnowszy forecast...")  # Online mode - download and load latest forecast
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\progl\anaconda3\Lib\encodings\cp1250.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+[2025-07-27 20:00:19] ⚠️ stderr:
+2025-07-27 20:00:07.633023: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-27 20:00:09.887792: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 88, in <module>
+    main()
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 37, in main
+    print("\u2601\ufe0f Tryb ONLINE - pobieram i wczytuję najnowszy forecast...")  # Online mode - download and load latest forecast
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\progl\anaconda3\Lib\encodings\cp1250.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+[2025-07-27 20:02:00] ⏳ Czekam... (20:02)
+[2025-07-27 20:02:00] ⏳ Waiting... (20:02)
+[2025-07-27 20:03:00] ⏳ Czekam... (20:03)
+
+[2025-07-27 20:04:00] ⏳ Czekam... (20:04)
+[2025-07-27 20:04:00] ⏳ Waiting... (20:04)
+[2025-07-27 20:05:00] ⏳ Czekam... (20:05)
+[2025-07-27 20:05:00] ⏳ Waiting... (20:05)
+[2025-07-27 20:06:00] ⏳ Czekam... (20:06)
+[2025-07-27 20:06:00] ⏳ Waiting... (20:06)
+[2025-07-27 20:07:00] ⏳ Czekam... (20:07)
+[2025-07-27 20:07:00] ⏳ Waiting... (20:07)
+[2025-07-27 20:08:00] ⏳ Czekam... (20:08)
+[2025-07-27 20:08:00] ⏳ Waiting... (20:08)
+[2025-07-27 20:09:00] ⏳ Waiting... (20:09)
+[2025-07-27 20:09:00] ⏳ Czekam... (20:09)
+[2025-07-27 20:10:00] ⏳ Waiting... (20:10)
+[2025-07-27 20:10:00] ⏳ Czekam... (20:10)
+[2025-07-27 20:11:00] ⏳ Czekam... (20:11)
+[2025-07-27 20:11:00] ⏳ Waiting... (20:11)
+[2025-07-27 20:12:00] ⏳ Czekam... (20:12)
+[2025-07-27 20:12:00] ⏳ Waiting... (20:12)
+[2025-07-27 20:13:00] ⏳ Czekam... (20:13)
+[2025-07-27 20:13:00] ⏳ Waiting... (20:13)
+[2025-07-27 20:14:00] ⏳ Czekam... (20:14)
+[2025-07-27 20:14:00] ⏳ Waiting... (20:14)
+[2025-07-27 20:15:00] ⏳ Czekam... (20:15)
+[2025-07-27 20:15:00] ⏳ Waiting... (20:15)
+[2025-07-27 20:16:00] ⏳ Czekam... (20:16)
+[2025-07-27 20:16:00] ⏳ Waiting... (20:16)
+[2025-07-27 20:17:00] ⏳ Czekam... (20:17)
+[2025-07-27 20:18:00] ⏳ Czekam... (20:18)
+[2025-07-28 04:00:02] ⏰ Time to run predict.py at 04:00
+[2025-07-28 04:00:02] 🚀 Starting predict.py
+[2025-07-28 04:00:02] ⏰ Czas na uruchomienie predict.py o godzinie 04:00
+[2025-07-28 04:00:02] 🚀 Startuję predict.py
+[2025-07-28 04:00:14] ❌ predict.py returned error (code: 1).
+[2025-07-28 04:00:14] ⚠️ stdout:
+ Start predykcji...
+
+[2025-07-28 04:00:14] ❌ Skrypt predict.py zwrócił błąd (kod: 1).
+orflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-28 04:00:06.441971: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 88, in <module>
+    main()
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 37, in main
+    print("\u2601\ufe0f Tryb ONLINE - pobieram i wczytuję najnowszy forecast...")  # Online mode - download and load latest forecast
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\progl\anaconda3\Lib\encodings\cp1250.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+[2025-07-28 04:00:14] ⚠️ stdout:
+ Start predykcji...
+
+[2025-07-28 04:00:14] ⚠️ stderr:
+2025-07-28 04:00:04.214018: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-07-28 04:00:06.441969: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 88, in <module>
+    main()
+  File "C:\Projekty\PV_AI_Forecast\src\predict.py", line 37, in main
+    print("\u2601\ufe0f Tryb ONLINE - pobieram i wczytuję najnowszy forecast...")  # Online mode - download and load latest forecast
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\progl\anaconda3\Lib\encodings\cp1250.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+

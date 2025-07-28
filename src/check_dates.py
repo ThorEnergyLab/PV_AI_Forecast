@@ -1,31 +1,36 @@
 import pandas as pd
 import os
 
-# 🔍 Sprawdzanie, czy pliki istnieją
-plik_falownik = "outputs/dane_falownika_plus_roz_moc.csv"
-plik_solcast_history = "data/solcast_history.csv"
-plik_solcast_forecast = "data/solcast_forecast.csv"
+#  Check if files exist
+#  Sprawdź, czy pliki istnieją
+inverter_file = "outputs/inverter_with_scaled_power.csv"
+solcast_history_file = "data/solcast_history.csv"
+solcast_forecast_file = "data/solcast_forecast.csv"
 
-def sprawdz_daty(plik, kolumna_czasu, opis):
-    if not os.path.isfile(plik):
-        print(f"❌ Plik {plik} nie istnieje!")
+def check_dates(file_path, time_column, description):
+    """
+    Check and print date range and record count for a CSV file.
+    Sprawdź i wyświetl zakres dat oraz liczbę rekordów w pliku CSV.
+    """
+    if not os.path.isfile(file_path):
+        print(f"❌ File {file_path} does not exist!")
         return
 
     try:
-        df = pd.read_csv(plik)
-        df[kolumna_czasu] = pd.to_datetime(df[kolumna_czasu])
-        print(f"\n📄 {opis} ({plik}):")
-        print(f"➡️ Zakres dat: {df[kolumna_czasu].min()} → {df[kolumna_czasu].max()}")
-        print(f"➡️ Liczba rekordów: {len(df)}")
+        df = pd.read_csv(file_path)
+        df[time_column] = pd.to_datetime(df[time_column])
+        print(f"\n {description} ({file_path}):")
+        print(f" Date range: {df[time_column].min()} → {df[time_column].max()}")
+        print(f" Number of records: {len(df)}")
     except Exception as e:
-        print(f"❌ Błąd podczas odczytu {plik}: {e}")
+        print(f" Error reading {file_path}: {e}")
 
 print("\n===========================")
-print("📅 SPRAWDZANIE ZAKRESÓW DAT")
+print(" CHECKING DATE RANGES")
 print("===========================\n")
 
-sprawdz_daty(plik_falownik, "timestamp", "Dane falownika")
-sprawdz_daty(plik_solcast_history, "period_end", "Solcast HISTORY")
-sprawdz_daty(plik_solcast_forecast, "period_end", "Solcast FORECAST")
+check_dates(inverter_file, "timestamp", "Inverter Data")
+check_dates(solcast_history_file, "period_end", "Solcast HISTORY")
+check_dates(solcast_forecast_file, "period_end", "Solcast FORECAST")
 
 print("\n===========================")
