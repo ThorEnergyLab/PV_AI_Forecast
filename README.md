@@ -44,6 +44,26 @@ PV_AI_Forecast/
 
 ---
 
+## Features
+
+- **Full Pipeline (Demo Mode)**  
+  Run the complete process — data cleaning, model training, and prediction — using static demo data from a sample inverter dataset.  
+  Controlled by setting `DEMO=1` in the `.env` file.
+
+- **Online Prediction Mode**  
+  Perform predictions using live weather data fetched from Solcast API and the pre-trained model (trained on the sample inverter data).  
+  Controlled by setting `DEMO=0` in the `.env` file.
+
+---
+## Included Scripts
+
+| Script Name                | Purpose                                                                                  | Status                       |
+|----------------------------|------------------------------------------------------------------------------------------|------------------------------|
+| `main.py`                  | Runs the full pipeline: data cleaning, training, prediction (demo mode)                  | Fully functional              |
+| `predict.py`               | Runs only prediction with live weather data and pre-trained model                        | Fully functional              |
+| `mqtt_data_collector.py`   | Example script for collecting inverter data via MQTT (requires customization)            | Example, requires setup       |
+| `solcast_history_downloader.py` | Example script to download historical weather data from Solcast API (requires API key) | Example, requires setup       |
+
 ## ▶️ How to Run
 
 ### ✅ Step 1: Install required libraries
