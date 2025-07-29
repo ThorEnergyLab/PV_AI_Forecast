@@ -163,3 +163,27 @@ This script fetches historical solar radiation data from the Solcast API. It req
 
 Important:
 This script is currently untested outside the Jupyter notebook environment and should be considered a starting point for your own implementation.
+
+## ⚠️ Important Notice
+
+Integration of this program with a real photovoltaic installation requires solid technical knowledge including:
+
+- MQTT protocol configuration and message handling  
+- LAN controller setup and communication  
+- Understanding inverter register maps and data acquisition  
+- Fundamentals of photovoltaic system operation  
+- Awareness of how varying weather conditions affect system behavior  
+
+This project provides tools and example scripts, but successful deployment and training of the prediction model depend on correctly obtaining and preparing installation-specific data.  
+
+Users without experience in these areas should be prepared for a learning curve or seek expert assistance.
+
+### Future Possibilities
+
+Once integrated with a specific installation, this system can potentially be extended to control devices based on forecasted and real-time energy production. This capability can help optimize:
+
+- Scheduling of production processes  
+- Operation of household appliances  
+- Energy management and load balancing  
+
+Such features will enable smarter use of renewable energy tailored to actual and predicted system output.
