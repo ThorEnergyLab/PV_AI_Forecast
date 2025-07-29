@@ -1,24 +1,44 @@
 # PV AI Forecasting
-
 This project predicts photovoltaic (PV) energy production based on weather forecasts from Solcast and real-time data from the inverter (via MQTT). The AI model predicts energy production in 15-minute intervals and calculates daily totals.
+
+Important:
+The scripts and models provided operate on a neural network trained with data from the author’s specific PV installation.
+To achieve accurate predictions tailored to your own installation, you must train your own model using:
+
+Real inverter data collected via MQTT from your specific inverter device
+
+Historical weather data for your location downloaded from Solcast API
+
+Without training on your own data, predictions may not accurately reflect your installation’s performance.
 
 ---
 
 ## 📦 Project Structure
 
-PV_AI_Forecast/  
-├── data/ ← Input data (mqtt_data.csv, solcast_history.csv, solcast_forecast.csv)  
-├── outputs/ ← Processed data and results (pivoted CSVs, reports)  
-├── models/ ← Saved AI models (model_trained.keras, scaler_produkcji.pkl)  
-├── src/ ← Python scripts (data_cleaner.py, data_merger.py, model_trainer.py, predictor.py, visualizer.py, main.py)  
-├── pipeline.ipynb ← Jupyter notebook for interactive work  
-├── README.md ← Project description (this file)  
-├── requirements.txt ← Required Python libraries  
-├── .gitignore ← Files and folders to be ignored by Git  
+PV_AI_Forecast/
+├── data/                 ← Input data (e.g., mqtt_data.csv, solcast_history.csv, solcast_forecast.csv)
+├── outputs/              ← Processed data and results (pivoted CSVs, aggregated reports, plots)
+├── models/               ← Saved AI models (e.g., model_trained.keras, scaler_produkcji.pkl)
+├── src/                  ← Main Python scripts:
+│   ├── data_cleaner.py         ← Data cleaning and preprocessing from MQTT raw data
+│   ├── data_merger.py          ← Merging inverter and weather forecast data
+│   ├── model_trainer.py        ← Training the neural network model
+│   ├── predictor.py            ← Predicting energy production using trained model
+│   ├── visualizer.py           ← Plotting and saving results as PDF
+│   ├── main.py                 ← Full pipeline: training + prediction (demo and online modes)
+│   ├── predict.py              ← Prediction only (uses pre-trained model)
+│   ├── mqtt_data_collector.py  ← Example script to collect MQTT data from inverter (*requires adaptation*)
+│   └── solcast_history_downloader.py ← Example script to download historical weather data from Solcast (*requires adaptation*)
+├── pipeline.ipynb         ← Jupyter notebook for interactive exploration and testing
+├── README.md              ← Project description and instructions (this file)
+├── requirements.txt       ← Python dependencies
+├── .gitignore             ← Git ignore rules
+└── .env.example.txt       ← Example environment variables file (API keys, mode flags)
+  
 
 ---
 
-## 🚀 Features
+## Features
 
 - ✅ Cleaning and filtering data from MQTT (inverter or LAN Controller).  
 - ✅ Merging inverter data with Solcast data (historical for training or forecast for prediction).  
@@ -27,7 +47,24 @@ PV_AI_Forecast/
 - ✅ Aggregating results to 15-minute intervals and daily totals.  
 - ✅ Visualization of predictions and historical data.  
 
+> ⚠️ Note:  
+> Some scripts (e.g., `mqtt_data_collector.py`, `solcast_history_downloader.py`) require technical configuration and adaptation to your hardware and API.
+
 ---
+
+## Operation Modes
+
+- **Full Pipeline (Demo Mode)**  
+  Run the complete process — data cleaning, model training, and prediction — using static demo data from a sample inverter dataset.  
+  Controlled by setting `DEMO=1` in the `.env` file.
+
+- **Online Prediction Mode**  
+  Perform predictions using live weather data fetched from Solcast API and the pre-trained model (trained on the sample inverter data).  
+  Controlled by setting `DEMO=0` in the `.env` file.
+
+---
+
+
 
 ## 🔧 Requirements
 
@@ -42,27 +79,8 @@ PV_AI_Forecast/
 - (optional) requests — if using Solcast API  
 - (optional) paho-mqtt — if using MQTT for data logging or device control  
 
----
-
-## Features
-
-- **Full Pipeline (Demo Mode)**  
-  Run the complete process — data cleaning, model training, and prediction — using static demo data from a sample inverter dataset.  
-  Controlled by setting `DEMO=1` in the `.env` file.
-
-- **Online Prediction Mode**  
-  Perform predictions using live weather data fetched from Solcast API and the pre-trained model (trained on the sample inverter data).  
-  Controlled by setting `DEMO=0` in the `.env` file.
 
 ---
-## Included Scripts
-
-| Script Name                | Purpose                                                                                  | Status                       |
-|----------------------------|------------------------------------------------------------------------------------------|------------------------------|
-| `main.py`                  | Runs the full pipeline: data cleaning, training, prediction (demo mode)                  | Fully functional              |
-| `predict.py`               | Runs only prediction with live weather data and pre-trained model                        | Fully functional              |
-| `mqtt_data_collector.py`   | Example script for collecting inverter data via MQTT (requires customization)            | Example, requires setup       |
-| `solcast_history_downloader.py` | Example script to download historical weather data from Solcast API (requires API key) | Example, requires setup       |
 
 ## ▶️ How to Run
 
@@ -71,19 +89,19 @@ PV_AI_Forecast/
 ```bash
 pip install -r requirements.txt
 
+
 ### ✅ Step 2: Run the full pipeline (clean → merge → train → predict)
 
 ```bash
 cd src
 python main.py
+
 ### ✅ Step 3: Run only prediction (without training)
 
 ```bash
 cd src
 python predict.py
 
-
-1.env Configuration
 ## ⚙️ `.env` Configuration
 
 This project uses a `.env` file to store environment variables that control how the program runs.
@@ -112,33 +130,35 @@ Never share your API key publicly! 🚫🔑
 
 ## Interactive Notebook (`pipeline.ipynb`)
 
-This Jupyter notebook serves as an interactive environment for data exploration, preprocessing, model training, and prediction testing. It contains step-by-step code snippets, visualizations, and explanations used during the development phase of the project.
+This Jupyter notebook provides an interactive environment for:
 
-**Purpose:**
+Exploring and cleaning historical MQTT and Solcast data.
 
-- Explore and clean historical data from MQTT and Solcast sources.
-- Prototype and train the neural network model.
-- Visualize intermediate results and forecasts.
-- Experiment with different data processing and model configurations.
+Prototyping and training the neural network model.
+
+Visualizing intermediate results and predictions.
+
+Experimenting with data processing and model configurations.
+
+Note:
+This notebook is for development and learning purposes. The production workflow is implemented in Python scripts (main.py, predict.py, etc.). Use the notebook to extend or explore the project, but it is not required for regular use.
 
 **Note:**  
 This notebook is intended for development and experimentation. The production-ready code is organized in Python scripts (`main.py`, `predict.py`, etc.). You may use this notebook for further development or learning, but it is not required for running the production workflow.
 
-### MQTT Data Collector Script / Skrypt do pobierania danych z MQTT
+### Example Scripts
+MQTT Data Collector Script (mqtt_data_collector.py)
 
-This Python script connects to an MQTT broker, subscribes to a specified topic pattern, and saves incoming messages to a CSV file with timestamps. It runs continuously in the background, appending new data as it arrives.
+A simple example Python script that connects to an MQTT broker, subscribes to specific topic patterns, and appends incoming messages to a CSV file with timestamps.
 
-The connection details (`BROKER`, `PORT`, `USERNAME`, `PASSWORD`, `TOPIC`) must be configured in the script before running. This script is intended as a simple example of how to collect data from your inverter or other MQTT-enabled devices for further processing and analysis.
+Note:
+Connection details (BROKER, PORT, USERNAME, PASSWORD, TOPIC) must be configured in the script before running.
+This script serves as a basic example for collecting data from your inverter or other MQTT-enabled devices for further processing.
 
----
-
-Ten skrypt Pythona łączy się z brokerem MQTT, subskrybuje wskazany wzorzec tematów (topic pattern) i zapisuje przychodzące wiadomości do pliku CSV z dokładnym czasem. Skrypt działa ciągle w tle, dopisując dane na bieżąco.
-
-Dane dostępowe do brokera (`BROKER`, `PORT`, `USERNAME`, `PASSWORD`, `TOPIC`) należy ustawić w pliku przed uruchomieniem. Skrypt jest prostym przykładem na pobieranie danych z falownika lub innych urządzeń MQTT do dalszej analizy i przetwarzania.
 
 ## Example Historical Data Downloader
 
-The script `solcast_history_downloader.py` is an example tool for fetching historical solar radiation data from Solcast API.  
-It requires setting your Solcast API key as an environment variable `SOLCAST_API_KEY`.  
-Please note this script is currently untested outside Jupyter Notebook and should be used as a starting point.
+This script fetches historical solar radiation data from the Solcast API. It requires your API key to be set as the environment variable SOLCAST_API_KEY.
 
+Important:
+This script is currently untested outside the Jupyter notebook environment and should be considered a starting point for your own implementation.
