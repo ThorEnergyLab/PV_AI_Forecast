@@ -1,4 +1,10 @@
 # PV AI Forecasting
+## 📄 Thesis
+
+This project is based on my Data Science postgraduate thesis (DSW Wrocław, 2025):  
+**Prediction of Photovoltaic Energy Using a Neural Network**  
+📄 [Read the full thesis PDF](./docs/Pacybulenko_PV_Energy_Thesis_2025.pdf)
+
 This project predicts photovoltaic (PV) energy production based on weather forecasts from Solcast and real-time data from the inverter (via MQTT). The AI model predicts energy production in 15-minute intervals and calculates daily totals.
 
 Important:
