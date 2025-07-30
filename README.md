@@ -78,26 +78,26 @@ Paweł Pacybulenko
 
 ## 📦 Project Structure
 
-```text
+```
 PV_AI_Forecast/
-├── data/                       ← Input data (e.g., mqtt_data.csv, solcast_history.csv, solcast_forecast.csv)
-├── outputs/                    ← Processed data and results (pivoted CSVs, aggregated reports, plots)
-├── models/                     ← Saved AI models (e.g., model_trained.keras, scaler_produkcji.pkl)
-├── src/                        ← Main Python scripts:
-│   ├── data_cleaner.py             ← Data cleaning and preprocessing from MQTT raw data
-│   ├── data_merger.py              ← Merging inverter and weather forecast data
-│   ├── model_trainer.py            ← Training the neural network model
-│   ├── predictor.py                ← Predicting energy production using trained model
-│   ├── visualizer.py               ← Plotting and saving results as PDF
-│   ├── main.py                    ← Full pipeline: training + prediction (demo and online modes)
-│   ├── predict.py                 ← Prediction only (uses pre-trained model)
-│   ├── mqtt_data_collector.py    ← Example script to collect MQTT data from inverter (requires adaptation)
-│   └── solcast_history_downloader.py ← Example script to download historical weather data from Solcast (requires adaptation)
-├── pipeline.ipynb              ← Jupyter notebook for interactive exploration and testing
-├── README.md                   ← Project description and instructions (this file)
-├── requirements.txt            ← Python dependencies
-├── .gitignore                 ← Git ignore rules
-└── .env.example.txt            ← Example environment variables file (API keys, mode flags)
+├── data/                       # Input data (e.g., mqtt_data.csv, solcast_history.csv, solcast_forecast.csv)
+├── outputs/                    # Processed data and results (pivoted CSVs, aggregated reports, plots)
+├── models/                     # Saved AI models (e.g., model_trained.keras, scaler_produkcji.pkl)
+├── src/                        # Main Python scripts:
+│   ├── data_cleaner.py             # Data cleaning and preprocessing from MQTT raw data
+│   ├── data_merger.py              # Merging inverter and weather forecast data
+│   ├── model_trainer.py            # Training the neural network model
+│   ├── predictor.py                # Predicting energy production using trained model
+│   ├── visualizer.py               # Plotting and saving results as PDF
+│   ├── main.py                    # Full pipeline: training + prediction (demo and online modes)
+│   ├── predict.py                 # Prediction only (uses pre-trained model)
+│   ├── mqtt_data_collector.py    # Example script to collect MQTT data from inverter (requires adaptation)
+│   └── solcast_history_downloader.py # Example script to download historical weather data from Solcast (requires adaptation)
+├── pipeline.ipynb              # Jupyter notebook for interactive exploration and testing
+├── README.md                   # Project description and instructions (this file)
+├── requirements.txt            # Python dependencies
+├── .gitignore                 # Git ignore rules
+└── .env.example.txt            # Example environment variables file (API keys, mode flags)
 
   
 
