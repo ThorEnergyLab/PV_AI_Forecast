@@ -78,7 +78,7 @@ Paweł Pacybulenko
 
 ## 📦 Project Structure
 
-```text
+```
 PV_AI_Forecast/
 ├── data/                       ← Input data (e.g., mqtt_data.csv, solcast_history.csv, solcast_forecast.csv)
 ├── outputs/                    ← Processed data and results (pivoted CSVs, aggregated reports, plots)
