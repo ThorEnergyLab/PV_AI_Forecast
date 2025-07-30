@@ -47,11 +47,14 @@ This project was developed as part of my postgraduate thesis in Data Science (DS
 
 ## 📦 Directory Structure
 
+```text
 PV_AI_Forecast/
-├── data/ # Training data & Solcast forecasts
-├── src/ # Scripts for preprocessing, training, prediction
-├── docs/ # Final thesis PDF and documentation
-└── README.md
+├── data/           # Training data & Solcast forecasts
+├── src/            # Scripts for preprocessing, training, prediction
+├── docs/           # Final thesis PDF and documentation
+│   └── Pacybulenko_PV_Energy_Thesis_2025.pdf
+├── models/         # Saved neural network models
+├── README.md
 
 ---
 
