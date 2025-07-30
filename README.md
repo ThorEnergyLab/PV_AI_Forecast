@@ -1,23 +1,77 @@
-# PV AI Forecasting
-## 📄 Thesis
+# ☀️ PV_AI_Forecast
 
-This project is based on my Data Science postgraduate thesis (DSW Wrocław, 2025):  
-**Prediction of Photovoltaic Energy Using a Neural Network**  
-📄 [Read the full thesis PDF](./docs/Pacybulenko_PV_Energy_Thesis_2025.pdf)
+**Photovoltaic Energy Production Forecast Using Neural Networks and Real-World Data**
 
-This project predicts photovoltaic (PV) energy production based on weather forecasts from Solcast and real-time data from the inverter (via MQTT). The AI model predicts energy production in 15-minute intervals and calculates daily totals.
-
-Important:
-The scripts and models provided operate on a neural network trained with data from the author’s specific PV installation.
-To achieve accurate predictions tailored to your own installation, you must train your own model using:
-
-Real inverter data collected via MQTT from your specific inverter device
-
-Historical weather data for your location downloaded from Solcast API
-
-Without training on your own data, predictions may not accurately reflect your installation’s performance.
+This repository contains a complete pipeline for predicting solar energy production using:
+- Real data from a Modbus-based inverter installation,
+- Solar irradiance forecasts from the Solcast API,
+- A neural network regression model built with TensorFlow/Keras.
 
 ---
+
+## 📄 Thesis (PDF)
+
+This project was developed as part of my postgraduate thesis in Data Science (DSW Wrocław, 2025):
+
+**"Prediction of Photovoltaic Energy Using a Neural Network"**
+
+📥 [Click here to read the full PDF](./docs/Pacybulenko_PV_Energy_Thesis_2025.pdf)
+
+---
+
+## 🧠 Model Overview
+
+- Input features:
+  - Global Horizontal Irradiance (GHI)
+  - Air Temperature
+  - Encoded time (`sin_hour`, `cos_hour`)
+- Target:
+  - Energy generated over the next 15-minute window
+- Metrics:
+  - MAE = 0.056 kWh
+  - RMSE = 0.082 kWh
+  - R² = 0.896
+
+---
+
+## ⚙️ Technologies Used
+
+- Python 3.12
+- pandas, numpy, scikit-learn
+- TensorFlow / Keras
+- SOLCAST API (GHI forecast)
+- MQTT + Modbus RTU (data acquisition)
+- Jupyter Notebook
+
+---
+
+## 📦 Directory Structure
+
+PV_AI_Forecast/
+├── data/ # Training data & Solcast forecasts
+├── src/ # Scripts for preprocessing, training, prediction
+├── docs/ # Final thesis PDF and documentation
+└── README.md
+
+---
+
+## 🔮 Future Development
+
+- Add DHI and more weather features (cloud cover, humidity)
+- Replace MLP with LSTM for time-series continuity
+- Deploy as lightweight prediction API or dashboard
+- Per-installation model tuning for deployment in OZE projects
+
+---
+
+## 👤 Author
+
+Paweł Pacybulenko  
+[LinkedIn (optional)](https://www.linkedin.com/in/your-name/)  
+[Thor Energy Lab](https://github.com/ThorEnergyLab)
+
+---
+
 
 ## 📦 Project Structure
 ```
